@@ -31,7 +31,7 @@ const NavigationBar = () => {
         }}
         elevation={0}
       >
-        <Toolbar>
+        <Toolbar style={{ paddingLeft: "0px", paddingRight: "0px" }}>
           <Typography variant="h5" className={classes.title}>
             Eric Luu
           </Typography>
