@@ -35,11 +35,7 @@ const App = () => {
         <Grid container direction="row" justify="center" alignItems="center">
           <Grid item xs={10}>
             <div>
-              <NavigationBar
-                style={{ padding: "100px" }}
-                changeView={changeView}
-                view={view}
-              />
+              <NavigationBar changeView={changeView} view={view} />
               {pageView[view]}
             </div>
           </Grid>
