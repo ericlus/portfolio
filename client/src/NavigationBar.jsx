@@ -41,15 +41,19 @@ const NavigationBar = ({ changeView }) => {
   return (
     <div className={classes.root}>
       <AppBar
-        position="static"
         style={{
-          backgroundColor: "transparent",
-
+          backgroundColor: "rgba(0, 0, 0, 0.8)",
           color: "white"
         }}
         elevation={0}
       >
-        <Toolbar style={{ paddingLeft: "0px", paddingRight: "0px" }}>
+        <Toolbar
+          style={{
+            paddingLeft: "0px",
+            paddingRight: "0px",
+            margin: "0px 100px"
+          }}
+        >
           <Typography
             variant="h5"
             className={classes.title}

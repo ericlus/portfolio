@@ -16,7 +16,7 @@ const HomeInfo = () => {
           style={{
             color: "white",
             textAlign: "center",
-            margin: "175px 0px 10px 0px",
+            margin: "250px 0px 10px 0px",
             fontSize: "80px"
           }}
         >
