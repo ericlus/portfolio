@@ -21,25 +21,30 @@ const useStyles = makeStyles(theme => ({
   actionLabel: {
     fontSize: "18px",
     color: "darkgray",
-    "&$actionSelected": { fontSize: "20px", color: "white" },
+    "&$actionSelected": { fontSize: "22px", color: "white" },
     transition: "font-size 0.1s, opacity 0.2s"
   },
   actionSelected: {}
 }));
 
-const NavigationBar = () => {
+const NavigationBar = ({ changeView }) => {
   const classes = useStyles();
   const [value, setValue] = React.useState(-1);
 
-  const handleClick = () => {
+  const handleClick = name => {
     setValue(-1);
+    changeView(name);
   };
+
+  const handleActionClick = name => changeView(name);
+
   return (
     <div className={classes.root}>
       <AppBar
         position="static"
         style={{
           backgroundColor: "transparent",
+
           color: "white"
         }}
         elevation={0}
@@ -48,7 +53,7 @@ const NavigationBar = () => {
           <Typography
             variant="h5"
             className={classes.title}
-            onClick={handleClick}
+            onClick={() => handleClick("HOME")}
             style={{ cursor: "pointer" }}
           >
             Eric Luu
@@ -69,6 +74,7 @@ const NavigationBar = () => {
                   label: classes.actionLabel,
                   selected: classes.actionSelected
                 }}
+                onClick={() => handleActionClick("ABOUT")}
               />
               <BottomNavigationAction
                 label="Resume"
@@ -77,6 +83,7 @@ const NavigationBar = () => {
                   label: classes.actionLabel,
                   selected: classes.actionSelected
                 }}
+                onClick={() => handleActionClick("RESUME")}
               />
               <BottomNavigationAction
                 label="Projects"
@@ -85,6 +92,7 @@ const NavigationBar = () => {
                   label: classes.actionLabel,
                   selected: classes.actionSelected
                 }}
+                onClick={() => handleActionClick("PROJECTS")}
               />
               <BottomNavigationAction
                 label="Contact"
@@ -93,6 +101,7 @@ const NavigationBar = () => {
                   label: classes.actionLabel,
                   selected: classes.actionSelected
                 }}
+                onClick={() => handleActionClick("CONTACT")}
               />
             </BottomNavigation>
           </div>

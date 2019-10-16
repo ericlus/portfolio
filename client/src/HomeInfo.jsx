@@ -30,8 +30,8 @@ const HomeInfo = () => {
             fontSize: "20px"
           }}
         >
-          I am a full stack software engineer that has a passion for learning
-          new technologies.
+          I am a software engineer that has a passion for learning new
+          technologies.
         </Typography>
         <Grid item xs={12} style={{ textAlign: "center", padding: "25px" }}>
           <Button variant="outlined" color="inherit" style={{ color: "white" }}>

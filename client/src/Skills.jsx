@@ -3,7 +3,7 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 
-const About = () => {
+const Skills = () => {
   return (
     <Grid container direction="row" justify="center" alignItems="center">
       <Grid item xs={12} style={{ textAlign: "center" }}>
@@ -11,7 +11,7 @@ const About = () => {
           variant="h4"
           style={{ fontWeight: "100", marginBottom: "15px" }}
         >
-          About Me
+          Skills and Abilities
         </Typography>
         <Divider
           variant="middle"
@@ -45,4 +45,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Skills;
