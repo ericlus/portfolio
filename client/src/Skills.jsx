@@ -11,11 +11,11 @@ const Skills = () => {
           variant="h4"
           style={{ fontWeight: "100", marginBottom: "15px" }}
         >
-          Skills and Abilities
+          Skills
         </Typography>
         <Divider
           variant="middle"
-          style={{ backgroundColor: "brown", margin: "0 550px" }}
+          style={{ backgroundColor: "brown", margin: "auto", width: "10%" }}
         />
       </Grid>
 

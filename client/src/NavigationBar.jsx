@@ -3,111 +3,80 @@ import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import BottomNavigation from "@material-ui/core/BottomNavigation";
-import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
+import Link from "@material-ui/core/Link";
 
 const useStyles = makeStyles(theme => ({
-  actionRoot: {
-    margin: "0px 15px",
-    padding: "0px"
-  },
   title: {
     flexGrow: 1
   },
-  button: {
-    fontWeight: 50,
-    margin: "0 10px"
-  },
-  actionLabel: {
-    fontSize: "18px",
-    color: "darkgray",
-    "&$actionSelected": { fontSize: "22px", color: "white" },
-    transition: "font-size 0.1s, opacity 0.2s"
-  },
-  actionSelected: {}
+  regularToolbar: { minHeight: "50px" }
 }));
 
-const NavigationBar = ({ changeView }) => {
+const NavigationBar = ({ changeView, navState }) => {
   const classes = useStyles();
-  const [value, setValue] = React.useState(-1);
 
-  const handleClick = name => {
-    setValue(-1);
-    changeView(name);
+  const navBackground = {
+    true: {
+      backgroundColor: "rgba(0, 0, 0, 0.8)"
+    },
+    false: {
+      backgroundColor: "transparent"
+    }
   };
 
-  const handleActionClick = name => changeView(name);
-
   return (
-    <div className={classes.root}>
-      <AppBar
-        style={{
-          backgroundColor: "rgba(0, 0, 0, 0.8)",
-          color: "white"
-        }}
-        elevation={0}
-      >
+    <div>
+      <AppBar style={navBackground[navState]} elevation={0}>
         <Toolbar
+          className={classes.regularToolbar}
           style={{
             paddingLeft: "0px",
             paddingRight: "0px",
             margin: "0px 100px"
           }}
         >
-          <Typography
-            variant="h5"
-            className={classes.title}
-            onClick={() => handleClick("HOME")}
-            style={{ cursor: "pointer" }}
-          >
-            Eric Luu
-          </Typography>
           <div>
-            <BottomNavigation
-              value={value}
-              onChange={(event, newValue) => {
-                setValue(newValue);
-              }}
-              showLabels
-              style={{ backgroundColor: "transparent" }}
-            >
-              <BottomNavigationAction
-                label="About"
-                classes={{
-                  root: classes.actionRoot,
-                  label: classes.actionLabel,
-                  selected: classes.actionSelected
-                }}
-                onClick={() => handleActionClick("ABOUT")}
-              />
-              <BottomNavigationAction
-                label="Resume"
-                classes={{
-                  root: classes.actionRoot,
-                  label: classes.actionLabel,
-                  selected: classes.actionSelected
-                }}
-                onClick={() => handleActionClick("RESUME")}
-              />
-              <BottomNavigationAction
-                label="Projects"
-                classes={{
-                  root: classes.actionRoot,
-                  label: classes.actionLabel,
-                  selected: classes.actionSelected
-                }}
-                onClick={() => handleActionClick("PROJECTS")}
-              />
-              <BottomNavigationAction
-                label="Contact"
-                classes={{
-                  root: classes.actionRoot,
-                  label: classes.actionLabel,
-                  selected: classes.actionSelected
-                }}
-                onClick={() => handleActionClick("CONTACT")}
-              />
-            </BottomNavigation>
+            <Link href="#Home">
+              <Typography
+                variant="h5"
+                className={classes.title}
+                style={{ cursor: "pointer", color: "white" }}
+              >
+                Eric Luu
+              </Typography>
+            </Link>
+          </div>
+          <div
+            style={{ display: "flex", marginLeft: "auto", marginRight: "0" }}
+          >
+            <Link href="#About" style={{ margin: "0px 15px" }}>
+              <Typography
+                style={{ color: "white", fontSize: "20px", fontWeight: "100" }}
+              >
+                About
+              </Typography>
+            </Link>
+            <Link href="#Skills" style={{ margin: "0px 15px" }}>
+              <Typography
+                style={{ color: "white", fontSize: "20px", fontWeight: "100" }}
+              >
+                Skills
+              </Typography>
+            </Link>
+            <Link href="#Projects" style={{ margin: "0px 15px" }}>
+              <Typography
+                style={{ color: "white", fontSize: "20px", fontWeight: "100" }}
+              >
+                Projects
+              </Typography>
+            </Link>
+            <Link href="#Contact" style={{ margin: "0px 15px" }}>
+              <Typography
+                style={{ color: "white", fontSize: "20px", fontWeight: "100" }}
+              >
+                Contact
+              </Typography>
+            </Link>
           </div>
         </Toolbar>
       </AppBar>

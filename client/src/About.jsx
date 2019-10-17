@@ -15,7 +15,7 @@ const About = () => {
         </Typography>
         <Divider
           variant="middle"
-          style={{ backgroundColor: "brown", margin: "0 550px" }}
+          style={{ backgroundColor: "brown", margin: "auto", width: "10%" }}
         />
       </Grid>
 

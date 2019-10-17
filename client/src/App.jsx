@@ -11,14 +11,7 @@ import Skills from "./Skills.jsx";
 
 const App = () => {
   const [view, setView] = useState("HOME");
-
-  const pageView = {
-    HOME: <HomeInfo />,
-    ABOUT: <About />,
-    PROJECTS: <Projects />,
-    RESUME: <Resume />,
-    CONTACT: <Contact />
-  };
+  const [navState, setNavState] = useState(false);
 
   const background = {
     HOME: {
@@ -32,30 +25,48 @@ const App = () => {
     setView(view);
   };
 
+  const handleScroll = event => {
+    if (window.scrollY > 700) {
+      setNavState(true);
+    }
+    if (window.scrollY < 700) {
+      setNavState(false);
+    }
+  };
+
+  useEffect(
+    () => window.addEventListener("scroll", handleScroll, { passive: true }),
+    []
+  );
+
   return (
     <div>
-      <section>
+      <section id="Home">
         <div style={background[view]}>
           <Grid container direction="row" justify="center" alignItems="center">
             <Grid item xs={10}>
-              <div>
-                <NavigationBar changeView={changeView} />
-                {pageView[view]}
-              </div>
+              <NavigationBar changeView={changeView} navState={navState} />
+              <HomeInfo />
             </Grid>
           </Grid>
         </div>
       </section>
-      <section style={{ padding: "75px 0px" }}>
+      <section id="About" style={{ padding: "75px 0px" }}>
         <About />
       </section>
-      <section style={{ padding: "75px 0px", backgroundColor: "#f5f5f7" }}>
+      <section
+        id="Skills"
+        style={{ padding: "75px 0px", backgroundColor: "#f5f5f7" }}
+      >
         <Skills />
       </section>
-      <section style={{ padding: "75px 0px" }}>
+      <section id="Projects" style={{ padding: "75px 0px" }}>
         <Projects />
       </section>
-      <section style={{ padding: "75px 0px", backgroundColor: "#f5f5f7" }}>
+      <section
+        id="Contact"
+        style={{ padding: "75px 0px", backgroundColor: "#f5f5f7" }}
+      >
         <Contact />
       </section>
     </div>
