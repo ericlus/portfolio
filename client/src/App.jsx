@@ -13,24 +13,20 @@ const App = () => {
   const [view, setView] = useState("HOME");
   const [navState, setNavState] = useState(false);
 
-  const background = {
-    HOME: {
-      height: "100vh",
-      backgroundImage: `url(${HomeWallpaper})`,
-      backgroundSize: "cover"
-    }
-  };
-
   const changeView = view => {
     setView(view);
   };
 
   const handleScroll = event => {
-    if (window.scrollY > 700) {
+    if (window.scrollY >= 714) {
       setNavState(true);
     }
-    if (window.scrollY < 700) {
+    if (window.scrollY < 714) {
       setNavState(false);
+    }
+
+    if (window.scrollY >= 0 && window.scrollY < 765) {
+      setView("HOME");
     }
   };
 
@@ -42,10 +38,20 @@ const App = () => {
   return (
     <div>
       <section id="Home">
-        <div style={background[view]}>
+        <div
+          style={{
+            height: "100vh",
+            backgroundImage: `url(${HomeWallpaper})`,
+            backgroundSize: "cover"
+          }}
+        >
           <Grid container direction="row" justify="center" alignItems="center">
             <Grid item xs={10}>
-              <NavigationBar changeView={changeView} navState={navState} />
+              <NavigationBar
+                changeView={changeView}
+                view={view}
+                navState={navState}
+              />
               <HomeInfo />
             </Grid>
           </Grid>

@@ -7,12 +7,26 @@ import Link from "@material-ui/core/Link";
 
 const useStyles = makeStyles(theme => ({
   title: {
-    flexGrow: 1
+    flexGrow: 1,
+    color: "white"
   },
-  regularToolbar: { minHeight: "50px" }
+  regularToolbar: { minHeight: "50px" },
+  navItem: {
+    color: "gray",
+    fontSize: "20px",
+    fontWeight: "100",
+    "&:hover": {
+      color: "white"
+    }
+  },
+  navSelected: {
+    color: "white",
+    fontSize: "20px",
+    fontWeight: "100"
+  }
 }));
 
-const NavigationBar = ({ changeView, navState }) => {
+const NavigationBar = ({ changeView, view, navState }) => {
   const classes = useStyles();
 
   const navBackground = {
@@ -23,6 +37,8 @@ const NavigationBar = ({ changeView, navState }) => {
       backgroundColor: "transparent"
     }
   };
+
+  const handleClick = viewName => changeView(viewName);
 
   return (
     <div>
@@ -36,12 +52,12 @@ const NavigationBar = ({ changeView, navState }) => {
           }}
         >
           <div>
-            <Link href="#Home">
-              <Typography
-                variant="h5"
-                className={classes.title}
-                style={{ cursor: "pointer", color: "white" }}
-              >
+            <Link
+              href="#Home"
+              underline="none"
+              onClick={() => handleClick("HOME")}
+            >
+              <Typography variant="h5" className={classes.title}>
                 Eric Luu
               </Typography>
             </Link>
@@ -49,30 +65,58 @@ const NavigationBar = ({ changeView, navState }) => {
           <div
             style={{ display: "flex", marginLeft: "auto", marginRight: "0" }}
           >
-            <Link href="#About" style={{ margin: "0px 15px" }}>
+            <Link
+              href="#About"
+              underline="none"
+              style={{ margin: "0px 15px" }}
+              onClick={() => handleClick("ABOUT")}
+            >
               <Typography
-                style={{ color: "white", fontSize: "20px", fontWeight: "100" }}
+                className={
+                  view !== "ABOUT" ? classes.navItem : classes.navSelected
+                }
               >
                 About
               </Typography>
             </Link>
-            <Link href="#Skills" style={{ margin: "0px 15px" }}>
+            <Link
+              href="#Skills"
+              underline="none"
+              style={{ margin: "0px 15px" }}
+              onClick={() => handleClick("SKILLS")}
+            >
               <Typography
-                style={{ color: "white", fontSize: "20px", fontWeight: "100" }}
+                className={
+                  view !== "SKILLS" ? classes.navItem : classes.navSelected
+                }
               >
                 Skills
               </Typography>
             </Link>
-            <Link href="#Projects" style={{ margin: "0px 15px" }}>
+            <Link
+              href="#Projects"
+              underline="none"
+              style={{ margin: "0px 15px" }}
+              onClick={() => handleClick("PROJECTS")}
+            >
               <Typography
-                style={{ color: "white", fontSize: "20px", fontWeight: "100" }}
+                className={
+                  view !== "PROJECTS" ? classes.navItem : classes.navSelected
+                }
               >
                 Projects
               </Typography>
             </Link>
-            <Link href="#Contact" style={{ margin: "0px 15px" }}>
+            <Link
+              href="#Contact"
+              underline="none"
+              style={{ margin: "0px 15px" }}
+              onClick={() => handleClick("CONTACT")}
+            >
               <Typography
-                style={{ color: "white", fontSize: "20px", fontWeight: "100" }}
+                className={
+                  view !== "CONTACT" ? classes.navItem : classes.navSelected
+                }
               >
                 Contact
               </Typography>
