@@ -2,10 +2,40 @@ import React from "react";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
+import Paper from "@material-ui/core/Paper";
+import { makeStyles } from "@material-ui/core/styles";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
+import ArrowRightRoundedIcon from "@material-ui/icons/ArrowRightRounded";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faDatabase,
+  faCode,
+  faTasks,
+  faSitemap
+} from "@fortawesome/free-solid-svg-icons";
+import Link from "@material-ui/core/Link";
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    padding: theme.spacing(3, 4),
+    width: "200px"
+  },
+  subHeader: {
+    textAlign: "center",
+    marginBottom: "15px"
+  },
+  icons: {
+    fontSize: "30px",
+    marginBottom: "15px"
+  }
+}));
 
 const Skills = () => {
+  const classes = useStyles();
   return (
-    <Grid container direction="row" justify="center" alignItems="center">
+    <Grid container direction="row" justify="center" alignItems="flex-start">
       <Grid item xs={12} style={{ textAlign: "center" }}>
         <Typography
           variant="h4"
@@ -17,29 +47,138 @@ const Skills = () => {
           variant="middle"
           style={{ backgroundColor: "brown", margin: "auto", width: "10%" }}
         />
+        <Typography style={{ margin: "60px 110px 0px 110px" }}>
+          My main programming language is JavaScript and all the{" "}
+          <Link style={{ cursor: "pointer" }}>projects</Link> I have developed
+          uses a combination of the technologies listed below. When working on a
+          project I follow an Agile/Scrum development process where features and
+          implementations are broken down into sprints or timed intervals to
+          continually provide deliverables to the client. Daily standup meetings
+          are conducted to evaluate the progress and potential changes to the
+          project.
+        </Typography>
       </Grid>
 
-      <Grid item xs={4} style={{ textAlign: "center", margin: "40px 40px" }}>
-        <Typography>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </Typography>
+      <Grid item style={{ textAlign: "center", margin: "60px 30px" }}>
+        <FontAwesomeIcon icon={faCode} className={classes.icons} />
+        <Paper className={classes.root}>
+          <Typography variant="h5" className={classes.subHeader}>
+            Front End
+          </Typography>
+
+          <List component="nav" aria-label="mailbox folders">
+            <ListItem>
+              <ArrowRightRoundedIcon />
+              <ListItemText primary="Javascript (ES6+)" />
+            </ListItem>
+            <ListItem>
+              <ArrowRightRoundedIcon />
+              <ListItemText primary="HTML5/CSS3" />
+            </ListItem>
+            <ListItem>
+              <ArrowRightRoundedIcon />
+              <ListItemText primary="React/Redux" />
+            </ListItem>
+            <ListItem>
+              <ArrowRightRoundedIcon />
+              <ListItemText primary="Material-UI/Bootstrap" />
+            </ListItem>
+            <ListItem>
+              <ArrowRightRoundedIcon />
+              <ListItemText primary="jQuery" />
+            </ListItem>
+          </List>
+        </Paper>
       </Grid>
-      <Grid item xs={4} style={{ textAlign: "center", margin: "40px 40px" }}>
-        <Typography>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </Typography>
+      <Grid item style={{ textAlign: "center", margin: "60px 30px" }}>
+        <FontAwesomeIcon icon={faDatabase} className={classes.icons} />
+        <Paper className={classes.root}>
+          <Typography variant="h5" className={classes.subHeader}>
+            Back End
+          </Typography>
+          <List component="nav" aria-label="mailbox folders">
+            <ListItem>
+              <ArrowRightRoundedIcon />
+              <ListItemText primary="Node/Express" />
+            </ListItem>
+            <ListItem>
+              <ArrowRightRoundedIcon />
+              <ListItemText primary="PostgreSQL" />
+            </ListItem>
+            <ListItem>
+              <ArrowRightRoundedIcon />
+              <ListItemText primary="MySQL" />
+            </ListItem>
+            <ListItem>
+              <ArrowRightRoundedIcon />
+              <ListItemText primary="MongoDB" />
+            </ListItem>
+            <ListItem>
+              <ArrowRightRoundedIcon />
+              <ListItemText primary="Restful API" />
+            </ListItem>
+          </List>
+        </Paper>
+      </Grid>
+      <Grid item style={{ textAlign: "center", margin: "60px 30px" }}>
+        <FontAwesomeIcon icon={faTasks} className={classes.icons} />
+        <Paper className={classes.root}>
+          <Typography variant="h5" className={classes.subHeader}>
+            Testing
+          </Typography>
+          <List component="nav" aria-label="mailbox folders">
+            <ListItem>
+              <ArrowRightRoundedIcon />
+              <ListItemText primary="Mocha/Chai" />
+            </ListItem>
+            <ListItem>
+              <ArrowRightRoundedIcon />
+              <ListItemText primary="Jest" />
+            </ListItem>
+            <ListItem>
+              <ArrowRightRoundedIcon />
+              <ListItemText primary="Enzyme" />
+            </ListItem>
+            <ListItem>
+              <ArrowRightRoundedIcon />
+              <ListItemText primary="Travis CI" />
+            </ListItem>
+          </List>
+        </Paper>
+      </Grid>
+      <Grid item style={{ textAlign: "center", margin: "60px 30px" }}>
+        <FontAwesomeIcon icon={faSitemap} className={classes.icons} />
+        <Paper className={classes.root}>
+          <Typography variant="h5" className={classes.subHeader}>
+            Other
+          </Typography>
+          <List component="nav" aria-label="mailbox folders">
+            <ListItem>
+              <ArrowRightRoundedIcon />
+              <ListItemText primary="Docker/Docker Swarm" />
+            </ListItem>
+            <ListItem>
+              <ArrowRightRoundedIcon />
+              <ListItemText primary="AWS" />
+            </ListItem>
+            <ListItem>
+              <ArrowRightRoundedIcon />
+              <ListItemText primary="Webpack" />
+            </ListItem>
+            <ListItem>
+              <ArrowRightRoundedIcon />
+              <ListItemText primary="TDD" />
+            </ListItem>
+            <ListItem>
+              <ArrowRightRoundedIcon />
+              <ListItemText primary="Git" />
+            </ListItem>
+            <ListItem>
+              <ArrowRightRoundedIcon />
+              <ListItemText primary="Agile/Scrum" />
+            </ListItem>
+          </List>
+        </Paper>
       </Grid>
     </Grid>
   );
