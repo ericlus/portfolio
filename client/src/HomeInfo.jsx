@@ -31,10 +31,16 @@ const HomeInfo = () => {
         </Typography>
 
         <div style={{ textAlign: "center", margin: "270px 0px 10px 0px" }}>
-          <Link href="#About">
+          <Link href="#About" underline="none">
             <Typography style={{ color: "white" }}>Learn More</Typography>
             <ExpandMoreIcon
-              style={{ color: "white", display: "block", margin: "auto" }}
+              style={{
+                color: "white",
+                display: "block",
+                margin: "auto",
+                marginTop: "3px"
+              }}
+              className="expandMore"
             />
           </Link>
         </div>
