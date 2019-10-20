@@ -19,8 +19,8 @@ import Link from "@material-ui/core/Link";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    padding: theme.spacing(3, 4),
-    width: "200px"
+    padding: theme.spacing(3, 3),
+    width: "250px"
   },
   subHeader: {
     textAlign: "center",
