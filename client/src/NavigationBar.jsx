@@ -23,6 +23,9 @@ const useStyles = makeStyles(theme => ({
     color: "white",
     fontSize: "20px",
     fontWeight: "100"
+  },
+  link: {
+    textDecoration: "none"
   }
 }));
 
@@ -56,6 +59,7 @@ const NavigationBar = ({ changeView, view, navState }) => {
               href="#Home"
               underline="none"
               onClick={() => handleClick("HOME")}
+              style={{ textDecoration: "none" }}
             >
               <Typography variant="h5" className={classes.title}>
                 Eric Luu
@@ -63,12 +67,15 @@ const NavigationBar = ({ changeView, view, navState }) => {
             </Link>
           </div>
           <div
-            style={{ display: "flex", marginLeft: "auto", marginRight: "0" }}
+            style={{
+              display: "flex",
+              marginLeft: "auto",
+              marginRight: "0"
+            }}
           >
             <Link
               href="#About"
-              underline="none"
-              style={{ margin: "0px 15px" }}
+              style={{ margin: "0px 15px", textDecoration: "none" }}
               onClick={() => handleClick("ABOUT")}
             >
               <Typography
@@ -82,7 +89,7 @@ const NavigationBar = ({ changeView, view, navState }) => {
             <Link
               href="#Skills"
               underline="none"
-              style={{ margin: "0px 15px" }}
+              style={{ margin: "0px 15px", textDecoration: "none" }}
               onClick={() => handleClick("SKILLS")}
             >
               <Typography
@@ -96,7 +103,7 @@ const NavigationBar = ({ changeView, view, navState }) => {
             <Link
               href="#Projects"
               underline="none"
-              style={{ margin: "0px 15px" }}
+              style={{ margin: "0px 15px", textDecoration: "none" }}
               onClick={() => handleClick("PROJECTS")}
             >
               <Typography
@@ -110,7 +117,7 @@ const NavigationBar = ({ changeView, view, navState }) => {
             <Link
               href="#Contact"
               underline="none"
-              style={{ margin: "0px 15px" }}
+              style={{ margin: "0px 15px", textDecoration: "none" }}
               onClick={() => handleClick("CONTACT")}
             >
               <Typography

@@ -31,7 +31,11 @@ const HomeInfo = () => {
         </Typography>
 
         <div style={{ textAlign: "center", margin: "270px 0px 10px 0px" }}>
-          <Link href="#About" underline="none">
+          <Link
+            href="#About"
+            underline="none"
+            style={{ textDecoration: "none" }}
+          >
             <Typography style={{ color: "white" }}>Learn More</Typography>
             <ExpandMoreIcon
               style={{

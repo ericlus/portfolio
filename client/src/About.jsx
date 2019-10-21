@@ -35,8 +35,11 @@ const About = () => {
           I decided to pursue my passion in coding by attending an advanced
           software engineering immersive program where I learned to develop
           projects using the entire stack. Here the{" "}
-          <Link style={{ cursor: "pointer" }}>technologies</Link> I have used
-          and the <Link style={{ cursor: "pointer" }}>projects</Link> I
+          <Link style={{ cursor: "pointer", color: "brown" }}>
+            technologies
+          </Link>{" "}
+          I have used and the{" "}
+          <Link style={{ cursor: "pointer", color: "brown" }}>projects</Link> I
           developed.
         </Typography>
       </Grid>

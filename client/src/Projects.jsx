@@ -76,6 +76,7 @@ const ClothesyModal = props => {
               return (
                 <Chip
                   key={chip.key}
+                  size="small"
                   label={chip.label}
                   style={{ margin: "3px" }}
                   variant="outlined"
@@ -84,11 +85,17 @@ const ClothesyModal = props => {
             })}
             <h5 style={{ marginTop: "15px" }}>About</h5>
             <p>
-              Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-              dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-              ac consectetur ac, vestibulum at eros.Cras mattis consectetur
-              purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-              eros.
+              Clothesy is a shopping application that mimics well known shopping
+              site's product information page. Clothesy is a project developed
+              in a group of 4 in which each member worked on a particular
+              section which includes, the product overview, related products,
+              question and answers, and reviews. Data was dynamically rendered
+              from a provided API.
+            </p>
+            <p>
+              I worked on the product overview section, which features an
+              interactive image carousel with selectable thumbnails reflecting
+              different product looks. To the right of the carousel
             </p>
           </Grid>
         </Grid>
@@ -127,6 +134,7 @@ const ClothesyAPIModal = props => {
               return (
                 <Chip
                   key={chip.key}
+                  size="small"
                   label={chip.label}
                   style={{ margin: "3px" }}
                   variant="outlined"
@@ -178,6 +186,7 @@ const AerolyModal = props => {
               return (
                 <Chip
                   key={chip.key}
+                  size="small"
                   label={chip.label}
                   style={{ margin: "3px" }}
                   variant="outlined"
