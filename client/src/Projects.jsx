@@ -9,6 +9,8 @@ import CardMedia from "@material-ui/core/CardMedia";
 import HomeWallpaper from "../images/wallpaper.png";
 import Modal from "react-bootstrap/Modal";
 import Chip from "@material-ui/core/Chip";
+import ClothesyThumbnail from "../images/clothesyOverview.png";
+import ClothesyScreenshot from "../images/ClothesyScreenshot.png";
 
 const useStyles = makeStyles({
   card: {
@@ -50,22 +52,34 @@ const ClothesyModal = props => {
   return (
     <Modal
       {...props}
-      size="xl"
+      size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      <Modal.Body style={{ padding: "0px" }}>
+      <Modal.Body
+        style={{ padding: "0px", maxHeight: "490px", overflow: "scroll" }}
+      >
         <Grid container>
           <Grid
             item
             xs={6}
             style={{
-              backgroundImage: `url(${HomeWallpaper})`,
-              backgroundSize: "cover",
-              height: "500px",
-              width: "700px"
+              backgroundImage: `url(${ClothesyScreenshot})`,
+              backgroundSize: "contain",
+              height: "100%",
+              width: "100%"
             }}
-          ></Grid>
+          >
+            <img
+              src={ClothesyScreenshot}
+              style={{
+                height: "100%",
+                width: "100%",
+                objectFit: "cover",
+                overflow: "hidden"
+              }}
+            />
+          </Grid>
           <Grid item xs={6} style={{ padding: "20px" }}>
             <Modal.Header
               closeButton
@@ -86,16 +100,30 @@ const ClothesyModal = props => {
             <h5 style={{ marginTop: "15px" }}>About</h5>
             <p>
               Clothesy is a shopping application that mimics well known shopping
-              site's product information page. Clothesy is a project developed
-              in a group of 4 in which each member worked on a particular
-              section which includes, the product overview, related products,
-              question and answers, and reviews. Data was dynamically rendered
-              from a provided API.
+              sites' product information page. Clothesy was built in a team of 4
+              using the Agile/Scrum methodology where daily standup meetings
+              were conducted to evaluate what was accomplished and needed to
+              improve based on the planned goals. I worked on the product
+              overview section for Clothesy, which plays the role of displaying
+              the product in a way of capturing the attention of the consumer.
             </p>
             <p>
-              I worked on the product overview section, which features an
-              interactive image carousel with selectable thumbnails reflecting
-              different product looks. To the right of the carousel
+              Some of the challenges I faced was managing time by having a
+              balance between investigating/utilizing new technologies while
+              also meeting the business requirement documents within the
+              specified deadline. To resolve this issue I used Trello, a
+              ticketing system, to track daily progress by creating tickets for
+              investigation and feature implementation.
+            </p>
+            <p>
+              Another challenge I faced was working with two different css
+              styling frameworks, Bootstrap and Material-UI. I used Bootstrap to
+              create the image carousel and managed the changing of the images
+              through the state in a class based component, however,
+              Material-UI's styling function requires a functional component. To
+              resolve this issue I had to learn React Hooks and refactor the
+              class based component to a functional component in order to use
+              both Bootstrap and Material-UI.
             </p>
           </Grid>
         </Grid>
@@ -231,7 +259,7 @@ const Projects = () => {
       <Grid item className={classes.gridSpace}>
         <Card className={classes.card}>
           <CardActionArea onClick={() => setClothesyShow(true)}>
-            <CardMedia className={classes.media} image={HomeWallpaper} />
+            <CardMedia className={classes.media} image={ClothesyThumbnail} />
           </CardActionArea>
         </Card>
       </Grid>
