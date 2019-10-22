@@ -100,8 +100,9 @@ const ClothesyModal = props => {
             <h5 style={{ marginTop: "15px" }}>About</h5>
             <p>
               Clothesy is a shopping application that mimics well known shopping
-              sites' product information page. Clothesy was built in a team of 4
-              using the Agile/Scrum methodology where daily standup meetings
+              sites' product information page where data was dynamically
+              rendered from a pre-exisiting API. Clothesy was built in a team of
+              4 using the Agile/Scrum methodology where daily standup meetings
               were conducted to evaluate what was accomplished and needed to
               improve based on the planned goals. I worked on the product
               overview section for Clothesy, which plays the role of displaying
@@ -136,11 +137,13 @@ const ClothesyAPIModal = props => {
   return (
     <Modal
       {...props}
-      size="xl"
+      size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      <Modal.Body style={{ padding: "0px" }}>
+      <Modal.Body
+        style={{ padding: "0px", maxHeight: "490px", overflow: "scroll" }}
+      >
         <Grid container>
           <Grid
             item
@@ -171,11 +174,35 @@ const ClothesyAPIModal = props => {
             })}
             <h5 style={{ marginTop: "15px" }}>About</h5>
             <p>
-              Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-              dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-              ac consectetur ac, vestibulum at eros.Cras mattis consectetur
-              purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-              eros.
+              Clothesy API is a redesigned API for Clothesy that is optimized
+              for HTTP response times and requests per second (RPS). I worked on
+              the questions and answers API where I was given an unfamiliar
+              front end code base and large csv files (20 million rows) to build
+              a node server, design the schema and load a PostgreSQL database.
+              The server and database was then deployed on an AWS EC2 instance
+              to be accessed by Clothesy front end.
+            </p>
+            <p>
+              Some of the challenges I faced was finding a way to optimize
+              database query speeds. The initial speed to query across three
+              tables to find a all the questions, answers, and photos related to
+              a specific product id was around 22 s. To resolve this issue I
+              indexed the foreign keys for each table and used aggregate
+              functions to reduce the query speed to 4 ms.
+            </p>
+            <p>
+              Another challenge I had was finding out a way to handle more
+              requests or increase RPS. My initial API was setup through using
+              Docker compose to run both the node server and PostgreSQL database
+              in one EC2 instance. The maximum RPS, obtained from Loader.io, the
+              API can handle without encountering any errors was 100 with an
+              average response time of 812 ms. To increase RPS, I decided to
+              separate the server from the database and scale the server by
+              using more EC2 instances. I used Docker Swarm to connect the
+              servers through an overlay network and HAProxy to serve as an
+              external load balancer to distribute requests across my servers.
+              The maximum RPS increased to 2000 with an error rate of 0% and an
+              average response time of 32 ms.
             </p>
           </Grid>
         </Grid>
@@ -223,11 +250,26 @@ const AerolyModal = props => {
             })}
             <h5 style={{ marginTop: "15px" }}>About</h5>
             <p>
-              Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-              dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-              ac consectetur ac, vestibulum at eros.Cras mattis consectetur
-              purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-              eros.
+              Aeroly is a flight price tracking application that will get the
+              latest deals to any destination. Aeroly uses the Skyscanner API to
+              get live results and ticket redirect to the purchasing page.
+            </p>
+            <p>
+              Some of the challenges I faced was using the API to get live
+              ticket prices. The API required a x-www-form-urlencoded content
+              type in the body, however, I was sending JSON data and was
+              receiving a status code of 400. To resolve the issue I had to
+              attach a content type header and use a querystring module to
+              convert the object in my body to an URI encoded string.
+            </p>
+            <p>
+              Another challenge I faced was creating the destination search
+              input to continually find related destinations while the user
+              types in a string. To create the related destination search I sent
+              a GET request to the API whenever the search input changes to get
+              an array of related destinations. I then used bootstrap
+              dynamically render the array of values as selectable entries that
+              will auto fill the search when clicked.
             </p>
           </Grid>
         </Grid>

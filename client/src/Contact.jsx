@@ -19,8 +19,8 @@ const Contact = () => {
         />
         <Typography style={{ margin: "60px 250px 0px 250px" }}>
           I am currently looking for a software engineering position where I can
-          learn and advance my skills to contribute growth and success towards
-          the company.
+          learn and advance my skills to contribute growth and success towards a
+          company.
         </Typography>
       </Grid>
     </Grid>
