@@ -6,8 +6,10 @@ import Divider from "@material-ui/core/Divider";
 import HomeWallpaper from "../images/wallpaper.png";
 import Modal from "react-bootstrap/Modal";
 import Chip from "@material-ui/core/Chip";
-import ClothesyThumbnail from "../images/clothesyOverview.png";
+import ClothesyThumbnail from "../images/clothesy.png";
 import ClothesyScreenshot from "../images/ClothesyScreenshot.png";
+import ClothesyAPIThumbnail from "../images/clothesyAPI.png";
+import AerolyThumbnail from "../images/aeroly.png";
 
 const useStyles = makeStyles({
   card: {
@@ -322,7 +324,7 @@ const Projects = () => {
               </Typography>
             </div>
             <img
-              style={{ height: "100%", width: "100%", objectFit: "cover" }}
+              style={{ height: "300px", paddingLeft: "50px" }}
               src={ClothesyThumbnail}
             ></img>
           </a>
@@ -337,8 +339,8 @@ const Projects = () => {
               </Typography>
             </div>
             <img
-              style={{ height: "100%", width: "100%", objectFit: "cover" }}
-              src={ClothesyThumbnail}
+              style={{ height: "300px", paddingLeft: "50px" }}
+              src={ClothesyAPIThumbnail}
             ></img>
           </a>
         </div>
@@ -352,8 +354,8 @@ const Projects = () => {
               </Typography>
             </div>
             <img
-              style={{ height: "100%", width: "100%", objectFit: "cover" }}
-              src={ClothesyThumbnail}
+              style={{ height: "300px", paddingLeft: "50px" }}
+              src={AerolyThumbnail}
             ></img>
           </a>
         </div>
