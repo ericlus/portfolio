@@ -3,9 +3,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
-import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardMedia from "@material-ui/core/CardMedia";
 import HomeWallpaper from "../images/wallpaper.png";
 import Modal from "react-bootstrap/Modal";
 import Chip from "@material-ui/core/Chip";
@@ -14,13 +11,29 @@ import ClothesyScreenshot from "../images/ClothesyScreenshot.png";
 
 const useStyles = makeStyles({
   card: {
-    width: 400
+    width: 400,
+    height: 300,
+    overflow: "hidden"
   },
   media: {
     height: 300
   },
   gridSpace: {
     margin: "60px 20px"
+  },
+  overlay: {
+    background: "rgba(0, 0, 0, 0.6)",
+    position: "absolute",
+    paddingTop: "125px",
+    textAlign: "center",
+    height: "300px",
+    width: "400px",
+    opacity: 0,
+    color: "white",
+    transition: "all 0.2s ease-in-out 0s",
+    "&:hover": {
+      opacity: 1
+    }
   }
 });
 
@@ -215,11 +228,13 @@ const AerolyModal = props => {
   return (
     <Modal
       {...props}
-      size="xl"
+      size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      <Modal.Body style={{ padding: "0px" }}>
+      <Modal.Body
+        style={{ padding: "0px", maxHeight: "490px", overflow: "scroll" }}
+      >
         <Grid container>
           <Grid
             item
@@ -299,25 +314,49 @@ const Projects = () => {
         />
       </Grid>
       <Grid item className={classes.gridSpace}>
-        <Card className={classes.card}>
-          <CardActionArea onClick={() => setClothesyShow(true)}>
-            <CardMedia className={classes.media} image={ClothesyThumbnail} />
-          </CardActionArea>
-        </Card>
+        <div className={classes.card} onClick={() => setClothesyShow(true)}>
+          <a style={{ cursor: "pointer" }}>
+            <div className={classes.overlay}>
+              <Typography variant="h4" style={{ fontWeight: "100" }}>
+                Clothesy
+              </Typography>
+            </div>
+            <img
+              style={{ height: "100%", width: "100%", objectFit: "cover" }}
+              src={ClothesyThumbnail}
+            ></img>
+          </a>
+        </div>
       </Grid>
       <Grid item className={classes.gridSpace}>
-        <Card className={classes.card}>
-          <CardActionArea onClick={() => setClothesyAPIShow(true)}>
-            <CardMedia className={classes.media} image={HomeWallpaper} />
-          </CardActionArea>
-        </Card>
+        <div className={classes.card} onClick={() => setClothesyAPIShow(true)}>
+          <a style={{ cursor: "pointer" }}>
+            <div className={classes.overlay}>
+              <Typography variant="h4" style={{ fontWeight: "100" }}>
+                Clothesy API
+              </Typography>
+            </div>
+            <img
+              style={{ height: "100%", width: "100%", objectFit: "cover" }}
+              src={ClothesyThumbnail}
+            ></img>
+          </a>
+        </div>
       </Grid>
       <Grid item className={classes.gridSpace}>
-        <Card className={classes.card}>
-          <CardActionArea onClick={() => setAerolyShow(true)}>
-            <CardMedia className={classes.media} image={HomeWallpaper} />
-          </CardActionArea>
-        </Card>
+        <div className={classes.card} onClick={() => setAerolyShow(true)}>
+          <a style={{ cursor: "pointer" }}>
+            <div className={classes.overlay}>
+              <Typography variant="h4" style={{ fontWeight: "100" }}>
+                Aeroly
+              </Typography>
+            </div>
+            <img
+              style={{ height: "100%", width: "100%", objectFit: "cover" }}
+              src={ClothesyThumbnail}
+            ></img>
+          </a>
+        </div>
       </Grid>
       <ClothesyModal
         show={clothesyShow}
