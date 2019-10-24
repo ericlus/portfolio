@@ -7,9 +7,12 @@ import HomeWallpaper from "../images/wallpaper.png";
 import Modal from "react-bootstrap/Modal";
 import Chip from "@material-ui/core/Chip";
 import ClothesyThumbnail from "../images/clothesy.png";
-import ClothesyScreenshot from "../images/ClothesyScreenshot.png";
+import ClothesyScreenshot1 from "../images/clothesy1.png";
+import ClothesyScreenshot2 from "../images/clothesy2.png";
+import ClothesyScreenshot3 from "../images/clothesy3.png";
 import ClothesyAPIThumbnail from "../images/clothesyAPI.png";
 import AerolyThumbnail from "../images/aeroly.png";
+import ProjectImages from "./ProjectImages.jsx";
 
 const useStyles = makeStyles({
   card: {
@@ -67,35 +70,26 @@ const ClothesyModal = props => {
   return (
     <Modal
       {...props}
-      size="lg"
+      size="xl"
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      <Modal.Body
-        style={{ padding: "0px", maxHeight: "490px", overflow: "scroll" }}
-      >
-        <Grid container>
-          <Grid
-            item
-            xs={6}
-            style={{
-              backgroundImage: `url(${ClothesyScreenshot})`,
-              backgroundSize: "contain",
-              height: "100%",
-              width: "100%"
-            }}
-          >
-            <img
-              src={ClothesyScreenshot}
-              style={{
-                height: "100%",
-                width: "100%",
-                objectFit: "cover",
-                overflow: "hidden"
-              }}
+      <Modal.Body style={{ padding: "0px" }}>
+        <Grid container direction="row" justify="center" alignItems="center">
+          <Grid item xs={8}>
+            <ProjectImages
+              pictures={[
+                ClothesyScreenshot1,
+                ClothesyScreenshot2,
+                ClothesyScreenshot3
+              ]}
             />
           </Grid>
-          <Grid item xs={6} style={{ padding: "20px" }}>
+          <Grid
+            item
+            xs={4}
+            style={{ padding: "20px", maxHeight: "600px", overflow: "scroll" }}
+          >
             <Modal.Header
               closeButton
               style={{ borderBottom: "0px", padding: "0px" }}
@@ -156,9 +150,7 @@ const ClothesyAPIModal = props => {
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      <Modal.Body
-        style={{ padding: "0px", maxHeight: "490px", overflow: "scroll" }}
-      >
+      <Modal.Body style={{ padding: "0px" }}>
         <Grid container>
           <Grid
             item
@@ -170,7 +162,11 @@ const ClothesyAPIModal = props => {
               width: "700px"
             }}
           ></Grid>
-          <Grid item xs={6} style={{ padding: "20px" }}>
+          <Grid
+            item
+            xs={6}
+            style={{ padding: "20px", maxHeight: "490px", overflow: "scroll" }}
+          >
             <Modal.Header
               closeButton
               style={{ borderBottom: "0px", padding: "0px" }}
@@ -234,9 +230,7 @@ const AerolyModal = props => {
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      <Modal.Body
-        style={{ padding: "0px", maxHeight: "490px", overflow: "scroll" }}
-      >
+      <Modal.Body style={{ padding: "0px" }}>
         <Grid container>
           <Grid
             item
@@ -248,7 +242,11 @@ const AerolyModal = props => {
               width: "700px"
             }}
           ></Grid>
-          <Grid item xs={6} style={{ padding: "20px" }}>
+          <Grid
+            item
+            xs={6}
+            style={{ padding: "20px", maxHeight: "490px", overflow: "scroll" }}
+          >
             <Modal.Header
               closeButton
               style={{ borderBottom: "0px", padding: "0px" }}
