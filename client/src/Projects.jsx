@@ -25,30 +25,28 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 
 const useStyles = makeStyles({
   card: {
-    width: 400,
-    height: 300,
+    width: 200,
+    height: 200,
     overflow: "hidden"
   },
-  media: {
-    height: 300
-  },
   gridSpace: {
-    margin: "60px 20px"
+    margin: "60px 70px"
   },
   overlay: {
     background: "rgba(0, 0, 0, 0.6)",
     position: "absolute",
-    paddingTop: "125px",
+    paddingTop: "75px",
     textAlign: "center",
-    height: "300px",
-    width: "400px",
+    height: "200px",
+    width: "200px",
     opacity: 0,
     color: "white",
     transition: "all 0.2s ease-in-out 0s",
     "&:hover": {
       opacity: 1
     }
-  }
+  },
+  thumbnails: { height: "200px", width: "100%" }
 });
 
 const clothesyChipData = [
@@ -361,14 +359,11 @@ const Projects = () => {
         <div className={classes.card} onClick={() => setClothesyShow(true)}>
           <a style={{ cursor: "pointer" }}>
             <div className={classes.overlay}>
-              <Typography variant="h4" style={{ fontWeight: "100" }}>
+              <Typography variant="h5" style={{ fontWeight: "100" }}>
                 Clothesy
               </Typography>
             </div>
-            <img
-              style={{ height: "300px", paddingLeft: "50px" }}
-              src={ClothesyThumbnail}
-            ></img>
+            <img className={classes.thumbnails} src={ClothesyThumbnail}></img>
           </a>
         </div>
       </Grid>
@@ -376,12 +371,12 @@ const Projects = () => {
         <div className={classes.card} onClick={() => setClothesyAPIShow(true)}>
           <a style={{ cursor: "pointer" }}>
             <div className={classes.overlay}>
-              <Typography variant="h4" style={{ fontWeight: "100" }}>
+              <Typography variant="h5" style={{ fontWeight: "100" }}>
                 Clothesy API
               </Typography>
             </div>
             <img
-              style={{ height: "300px", paddingLeft: "50px" }}
+              className={classes.thumbnails}
               src={ClothesyAPIThumbnail}
             ></img>
           </a>
@@ -391,14 +386,11 @@ const Projects = () => {
         <div className={classes.card} onClick={() => setAerolyShow(true)}>
           <a style={{ cursor: "pointer" }}>
             <div className={classes.overlay}>
-              <Typography variant="h4" style={{ fontWeight: "100" }}>
+              <Typography variant="h5" style={{ fontWeight: "100" }}>
                 Aeroly
               </Typography>
             </div>
-            <img
-              style={{ height: "300px", paddingLeft: "50px" }}
-              src={AerolyThumbnail}
-            ></img>
+            <img className={classes.thumbnails} src={AerolyThumbnail}></img>
           </a>
         </div>
       </Grid>
