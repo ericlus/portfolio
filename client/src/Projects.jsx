@@ -10,6 +10,13 @@ import ClothesyThumbnail from "../images/clothesy.png";
 import ClothesyScreenshot1 from "../images/clothesy1.png";
 import ClothesyScreenshot2 from "../images/clothesy2.png";
 import ClothesyScreenshot3 from "../images/clothesy3.png";
+import ClothesyAPIScreenshot1 from "../images/api1.png";
+import ClothesyAPIScreenshot2 from "../images/api2.png";
+import ClothesyAPIScreenshot3 from "../images/api3.png";
+import AerolyScreenshot1 from "../images/aeroly1.png";
+import AerolyScreenshot2 from "../images/aeroly2.png";
+import AerolyScreenshot3 from "../images/aeroly3.png";
+import AerolyScreenshot4 from "../images/aeroly4.png";
 import ClothesyAPIThumbnail from "../images/clothesyAPI.png";
 import AerolyThumbnail from "../images/aeroly.png";
 import ProjectImages from "./ProjectImages.jsx";
@@ -146,26 +153,25 @@ const ClothesyAPIModal = props => {
   return (
     <Modal
       {...props}
-      size="lg"
+      size="xl"
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
       <Modal.Body style={{ padding: "0px" }}>
-        <Grid container>
+        <Grid container alignItems="center">
+          <Grid item xs={8}>
+            <ProjectImages
+              pictures={[
+                ClothesyAPIScreenshot3,
+                ClothesyAPIScreenshot1,
+                ClothesyAPIScreenshot2
+              ]}
+            />
+          </Grid>
           <Grid
             item
-            xs={6}
-            style={{
-              backgroundImage: `url(${HomeWallpaper})`,
-              backgroundSize: "cover",
-              height: "500px",
-              width: "700px"
-            }}
-          ></Grid>
-          <Grid
-            item
-            xs={6}
-            style={{ padding: "20px", maxHeight: "490px", overflow: "scroll" }}
+            xs={4}
+            style={{ padding: "20px", maxHeight: "600px", overflow: "scroll" }}
           >
             <Modal.Header
               closeButton
@@ -226,26 +232,26 @@ const AerolyModal = props => {
   return (
     <Modal
       {...props}
-      size="lg"
+      size="xl"
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
       <Modal.Body style={{ padding: "0px" }}>
-        <Grid container>
+        <Grid container direction="row" justify="center" alignItems="center">
+          <Grid item xs={8}>
+            <ProjectImages
+              pictures={[
+                AerolyScreenshot1,
+                AerolyScreenshot2,
+                AerolyScreenshot3,
+                AerolyScreenshot4
+              ]}
+            />
+          </Grid>
           <Grid
             item
-            xs={6}
-            style={{
-              backgroundImage: `url(${HomeWallpaper})`,
-              backgroundSize: "cover",
-              height: "500px",
-              width: "700px"
-            }}
-          ></Grid>
-          <Grid
-            item
-            xs={6}
-            style={{ padding: "20px", maxHeight: "490px", overflow: "scroll" }}
+            xs={4}
+            style={{ padding: "20px", maxHeight: "600px", overflow: "scroll" }}
           >
             <Modal.Header
               closeButton

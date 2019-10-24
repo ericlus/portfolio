@@ -16,11 +16,12 @@ const ProjectImages = ({ pictures }) => {
           style={{ color: "black", opacity: "0.7", marginRight: "30px" }}
         />
       }
+      indicators={false}
     >
       {pictures.map(picture => {
         return (
           <Carousel.Item>
-            <img className="d-block w-100" src={picture} />
+            <img style={{ width: "100%", height: "430px" }} src={picture} />
           </Carousel.Item>
         );
       })}
