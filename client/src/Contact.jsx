@@ -2,6 +2,7 @@ import React from "react";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
+import Button from "@material-ui/core/Button";
 
 const Contact = () => {
   return (
@@ -17,11 +18,14 @@ const Contact = () => {
           variant="middle"
           style={{ backgroundColor: "brown", margin: "auto", width: "10%" }}
         />
-        <Typography style={{ margin: "60px 250px 0px 250px" }}>
+        <Typography style={{ margin: "60px 250px 30px 250px" }}>
           I am currently looking for a software engineering position where I can
           learn and advance my skills to contribute growth and success towards a
           company.
         </Typography>
+        <Button variant="outlined" style={{ borderColor: "brown" }}>
+          Let's get in touch
+        </Button>
       </Grid>
     </Grid>
   );

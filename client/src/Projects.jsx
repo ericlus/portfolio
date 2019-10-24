@@ -3,7 +3,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
-import HomeWallpaper from "../images/wallpaper.png";
 import Modal from "react-bootstrap/Modal";
 import Chip from "@material-ui/core/Chip";
 import ClothesyThumbnail from "../images/clothesy.png";
@@ -13,6 +12,7 @@ import ClothesyScreenshot3 from "../images/clothesy3.png";
 import ClothesyAPIScreenshot1 from "../images/api1.png";
 import ClothesyAPIScreenshot2 from "../images/api2.png";
 import ClothesyAPIScreenshot3 from "../images/api3.png";
+import ClothesyAPIScreenshot4 from "../images/api4.png";
 import AerolyScreenshot1 from "../images/aeroly1.png";
 import AerolyScreenshot2 from "../images/aeroly2.png";
 import AerolyScreenshot3 from "../images/aeroly3.png";
@@ -20,6 +20,8 @@ import AerolyScreenshot4 from "../images/aeroly4.png";
 import ClothesyAPIThumbnail from "../images/clothesyAPI.png";
 import AerolyThumbnail from "../images/aeroly.png";
 import ProjectImages from "./ProjectImages.jsx";
+import Button from "@material-ui/core/Button";
+import GitHubIcon from "@material-ui/icons/GitHub";
 
 const useStyles = makeStyles({
   card: {
@@ -101,7 +103,9 @@ const ClothesyModal = props => {
               closeButton
               style={{ borderBottom: "0px", padding: "0px" }}
             />
-            <h3>Clothesy</h3>
+            <div style={{ display: "flex" }}>
+              <h3>Clothesy</h3>
+            </div>
             {clothesyChipData.map(chip => {
               return (
                 <Chip
@@ -113,6 +117,11 @@ const ClothesyModal = props => {
                 />
               );
             })}
+            <div style={{ margin: "20px 0px" }}>
+              <Button variant="outlined" startIcon={<GitHubIcon />}>
+                Code
+              </Button>
+            </div>
             <h5 style={{ marginTop: "15px" }}>About</h5>
             <p>
               Clothesy is a shopping application that mimics well known shopping
@@ -162,6 +171,7 @@ const ClothesyAPIModal = props => {
           <Grid item xs={8}>
             <ProjectImages
               pictures={[
+                ClothesyAPIScreenshot4,
                 ClothesyAPIScreenshot3,
                 ClothesyAPIScreenshot1,
                 ClothesyAPIScreenshot2
@@ -189,6 +199,11 @@ const ClothesyAPIModal = props => {
                 />
               );
             })}
+            <div style={{ margin: "20px 0px" }}>
+              <Button variant="outlined" startIcon={<GitHubIcon />}>
+                Code
+              </Button>
+            </div>
             <h5 style={{ marginTop: "15px" }}>About</h5>
             <p>
               Clothesy API is a redesigned API for Clothesy that is optimized
@@ -269,6 +284,11 @@ const AerolyModal = props => {
                 />
               );
             })}
+            <div style={{ margin: "20px 0px" }}>
+              <Button variant="outlined" startIcon={<GitHubIcon />}>
+                Code
+              </Button>
+            </div>
             <h5 style={{ marginTop: "15px" }}>About</h5>
             <p>
               Aeroly is a flight price tracking application that will get the

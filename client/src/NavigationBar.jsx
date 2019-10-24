@@ -4,6 +4,7 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
+import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles(theme => ({
   title: {
@@ -70,12 +71,12 @@ const NavigationBar = ({ changeView, view, navState }) => {
             style={{
               display: "flex",
               marginLeft: "auto",
-              marginRight: "0"
+              height: "50px"
             }}
           >
             <Link
               href="#About"
-              style={{ margin: "0px 15px", textDecoration: "none" }}
+              style={{ margin: "10px 15px", textDecoration: "none" }}
               onClick={() => handleClick("ABOUT")}
             >
               <Typography
@@ -89,7 +90,7 @@ const NavigationBar = ({ changeView, view, navState }) => {
             <Link
               href="#Skills"
               underline="none"
-              style={{ margin: "0px 15px", textDecoration: "none" }}
+              style={{ margin: "10px 15px", textDecoration: "none" }}
               onClick={() => handleClick("SKILLS")}
             >
               <Typography
@@ -103,7 +104,7 @@ const NavigationBar = ({ changeView, view, navState }) => {
             <Link
               href="#Projects"
               underline="none"
-              style={{ margin: "0px 15px", textDecoration: "none" }}
+              style={{ margin: "10px 15px", textDecoration: "none" }}
               onClick={() => handleClick("PROJECTS")}
             >
               <Typography
@@ -117,7 +118,7 @@ const NavigationBar = ({ changeView, view, navState }) => {
             <Link
               href="#Contact"
               underline="none"
-              style={{ margin: "0px 15px", textDecoration: "none" }}
+              style={{ margin: "10px 15px", textDecoration: "none" }}
               onClick={() => handleClick("CONTACT")}
             >
               <Typography
@@ -128,6 +129,16 @@ const NavigationBar = ({ changeView, view, navState }) => {
                 Contact
               </Typography>
             </Link>
+            <Button
+              variant="outlined"
+              style={{
+                color: "white",
+                borderColor: "white",
+                margin: "5px 20px"
+              }}
+            >
+              Resume
+            </Button>
           </div>
         </Toolbar>
       </AppBar>
