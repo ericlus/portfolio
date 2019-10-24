@@ -49,8 +49,10 @@ const Skills = () => {
         />
         <Typography style={{ margin: "60px 110px 0px 110px" }}>
           My main programming language is JavaScript and all the{" "}
-          <Link style={{ cursor: "pointer", color: "brown" }}>projects</Link> I
-          have developed uses a combination of the technologies listed below.
+          <Link href="#Projects" style={{ cursor: "pointer", color: "brown" }}>
+            projects
+          </Link>{" "}
+          I have developed uses a combination of the technologies listed below.
           When working on a project I follow an Agile/Scrum development process
           where features and implementations are broken down into sprints or
           timed intervals to continually provide deliverables to the client.

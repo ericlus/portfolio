@@ -23,9 +23,15 @@ const Contact = () => {
           learn and advance my skills to contribute growth and success towards a
           company.
         </Typography>
-        <Button variant="outlined" style={{ borderColor: "brown" }}>
-          Let's get in touch
-        </Button>
+        <a>
+          <Button
+            href="mailto:ericluu24@gmail.com"
+            variant="outlined"
+            style={{ borderColor: "brown", backgroundColor: "white" }}
+          >
+            Let's get in touch
+          </Button>
+        </a>
       </Grid>
     </Grid>
   );

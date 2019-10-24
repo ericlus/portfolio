@@ -129,16 +129,22 @@ const NavigationBar = ({ changeView, view, navState }) => {
                 Contact
               </Typography>
             </Link>
-            <Button
-              variant="outlined"
-              style={{
-                color: "white",
-                borderColor: "white",
-                margin: "5px 20px"
-              }}
+            <Link
+              href="/resume"
+              target="_blank"
+              style={{ textDecoration: "none" }}
             >
-              Resume
-            </Button>
+              <Button
+                variant="outlined"
+                style={{
+                  color: "white",
+                  borderColor: "white",
+                  margin: "5px 20px"
+                }}
+              >
+                Resume
+              </Button>
+            </Link>
           </div>
         </Toolbar>
       </AppBar>

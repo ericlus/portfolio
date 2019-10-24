@@ -6,6 +6,10 @@ const app = express();
 
 app.use("/", express.static(path.join(__dirname, "../client/dist")));
 
+app.get("/resume", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/images/EricLuuResume.pdf"));
+});
+
 app.listen(port, () => {
   console.log(`listening on port ${port}`);
 });

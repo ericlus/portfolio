@@ -35,12 +35,14 @@ const About = () => {
           I decided to pursue my passion in coding by attending an advanced
           software engineering immersive program where I learned to develop
           projects using the entire stack. Here the{" "}
-          <Link style={{ cursor: "pointer", color: "brown" }}>
+          <Link href="#Skills" style={{ cursor: "pointer", color: "brown" }}>
             technologies
           </Link>{" "}
           I have used and the{" "}
-          <Link style={{ cursor: "pointer", color: "brown" }}>projects</Link> I
-          developed.
+          <Link href="#Projects" style={{ cursor: "pointer", color: "brown" }}>
+            projects
+          </Link>{" "}
+          I developed.
         </Typography>
       </Grid>
       <Grid item xs={4} style={{ margin: "60px 40px" }}>

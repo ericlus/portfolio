@@ -118,9 +118,11 @@ const ClothesyModal = props => {
               );
             })}
             <div style={{ margin: "20px 0px" }}>
-              <Button variant="outlined" startIcon={<GitHubIcon />}>
-                Code
-              </Button>
+              <a href="https://github.com/fecpanther/Clothesy" target="_blank">
+                <Button variant="outlined" startIcon={<GitHubIcon />}>
+                  Code
+                </Button>
+              </a>
             </div>
             <h5 style={{ marginTop: "15px" }}>About</h5>
             <p>
@@ -200,9 +202,11 @@ const ClothesyAPIModal = props => {
               );
             })}
             <div style={{ margin: "20px 0px" }}>
-              <Button variant="outlined" startIcon={<GitHubIcon />}>
-                Code
-              </Button>
+              <a href="https://github.com/ericlus/Clothesy-API" target="_blank">
+                <Button variant="outlined" startIcon={<GitHubIcon />}>
+                  Code
+                </Button>
+              </a>
             </div>
             <h5 style={{ marginTop: "15px" }}>About</h5>
             <p>
@@ -285,9 +289,11 @@ const AerolyModal = props => {
               );
             })}
             <div style={{ margin: "20px 0px" }}>
-              <Button variant="outlined" startIcon={<GitHubIcon />}>
-                Code
-              </Button>
+              <a href="https://github.com/ericlus/Aeroly" target="_blank">
+                <Button variant="outlined" startIcon={<GitHubIcon />}>
+                  Code
+                </Button>
+              </a>
             </div>
             <h5 style={{ marginTop: "15px" }}>About</h5>
             <p>
