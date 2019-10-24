@@ -118,7 +118,11 @@ const ClothesyModal = props => {
               );
             })}
             <div style={{ margin: "20px 0px" }}>
-              <a href="https://github.com/fecpanther/Clothesy" target="_blank">
+              <a
+                href="https://github.com/fecpanther/Clothesy"
+                target="_blank"
+                style={{ textDecoration: "none" }}
+              >
                 <Button variant="outlined" startIcon={<GitHubIcon />}>
                   Code
                 </Button>
@@ -202,7 +206,11 @@ const ClothesyAPIModal = props => {
               );
             })}
             <div style={{ margin: "20px 0px" }}>
-              <a href="https://github.com/ericlus/Clothesy-API" target="_blank">
+              <a
+                href="https://github.com/ericlus/Clothesy-API"
+                target="_blank"
+                style={{ textDecoration: "none" }}
+              >
                 <Button variant="outlined" startIcon={<GitHubIcon />}>
                   Code
                 </Button>
@@ -289,7 +297,11 @@ const AerolyModal = props => {
               );
             })}
             <div style={{ margin: "20px 0px" }}>
-              <a href="https://github.com/ericlus/Aeroly" target="_blank">
+              <a
+                href="https://github.com/ericlus/Aeroly"
+                target="_blank"
+                style={{ textDecoration: "none" }}
+              >
                 <Button variant="outlined" startIcon={<GitHubIcon />}>
                   Code
                 </Button>

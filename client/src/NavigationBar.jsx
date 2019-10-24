@@ -9,7 +9,8 @@ import Button from "@material-ui/core/Button";
 const useStyles = makeStyles(theme => ({
   title: {
     flexGrow: 1,
-    color: "white"
+    color: "white",
+    fontWeight: "100"
   },
   regularToolbar: { minHeight: "50px" },
   navItem: {
@@ -129,22 +130,18 @@ const NavigationBar = ({ changeView, view, navState }) => {
                 Contact
               </Typography>
             </Link>
-            <Link
+            <Button
+              variant="outlined"
               href="/resume"
               target="_blank"
-              style={{ textDecoration: "none" }}
+              style={{
+                color: "white",
+                borderColor: "white",
+                margin: "5px 20px"
+              }}
             >
-              <Button
-                variant="outlined"
-                style={{
-                  color: "white",
-                  borderColor: "white",
-                  margin: "5px 20px"
-                }}
-              >
-                Resume
-              </Button>
-            </Link>
+              Resume
+            </Button>
           </div>
         </Toolbar>
       </AppBar>

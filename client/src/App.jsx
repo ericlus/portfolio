@@ -5,9 +5,9 @@ import HomeWallpaper from "../images/wallpaper.png";
 import HomeInfo from "./HomeInfo.jsx";
 import About from "./About.jsx";
 import Projects from "./Projects.jsx";
-import Resume from "./Resume.jsx";
 import Contact from "./Contact.jsx";
 import Skills from "./Skills.jsx";
+import Footer from "./Footer.jsx";
 
 const App = () => {
   const [view, setView] = useState("HOME");
@@ -18,16 +18,25 @@ const App = () => {
   };
 
   const handleScroll = event => {
+    console.log(window.scrollY);
     if (window.scrollY >= 714) {
       setNavState(true);
     }
     if (window.scrollY < 714) {
       setNavState(false);
     }
-
     if (window.scrollY >= 0 && window.scrollY < 765) {
       setView("HOME");
     }
+    if (window.scrollY >= 765 && window.scrollY < 1397) {
+      setView("ABOUT");
+    }
+    if (window.scrollY >= 1397 && window.scrollY < 2901) {
+      setView("SKILLS");
+    }
+    // if (window.scrollY >= 2901 && window.scrollY < 2901) {
+    //   setView("SKILLS");
+    // }
   };
 
   useEffect(
@@ -74,6 +83,9 @@ const App = () => {
         style={{ padding: "75px 0px", backgroundColor: "#f5f5f7" }}
       >
         <Contact />
+      </section>
+      <section style={{ padding: "75px", backgroundColor: "#242424" }}>
+        <Footer />
       </section>
     </div>
   );

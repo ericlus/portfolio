@@ -18,20 +18,23 @@ const Contact = () => {
           variant="middle"
           style={{ backgroundColor: "brown", margin: "auto", width: "10%" }}
         />
-        <Typography style={{ margin: "60px 250px 30px 250px" }}>
+        <Typography style={{ margin: "60px 250px 50px 250px" }}>
           I am currently looking for a software engineering position where I can
           learn and advance my skills to contribute growth and success towards a
           company.
         </Typography>
-        <a>
-          <Button
-            href="mailto:ericluu24@gmail.com"
-            variant="outlined"
-            style={{ borderColor: "brown", backgroundColor: "white" }}
-          >
-            Let's get in touch
-          </Button>
-        </a>
+        <Button
+          href="mailto:ericluu24@gmail.com"
+          variant="outlined"
+          style={{
+            borderColor: "brown",
+            backgroundColor: "white",
+            textDecoration: "none",
+            color: "black"
+          }}
+        >
+          Let's get in touch
+        </Button>
       </Grid>
     </Grid>
   );

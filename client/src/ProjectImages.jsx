@@ -18,9 +18,9 @@ const ProjectImages = ({ pictures }) => {
       }
       indicators={false}
     >
-      {pictures.map(picture => {
+      {pictures.map((picture, i) => {
         return (
-          <Carousel.Item>
+          <Carousel.Item key={i}>
             <img style={{ width: "100%", height: "430px" }} src={picture} />
           </Carousel.Item>
         );
