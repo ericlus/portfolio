@@ -28,15 +28,18 @@ const App = () => {
     if (window.scrollY >= 0 && window.scrollY < 765) {
       setView("HOME");
     }
-    if (window.scrollY >= 765 && window.scrollY < 1397) {
+    if (window.scrollY >= 765 && window.scrollY < 1349) {
       setView("ABOUT");
     }
-    if (window.scrollY >= 1397 && window.scrollY < 2901) {
+    if (window.scrollY >= 1349 && window.scrollY < 2282) {
       setView("SKILLS");
     }
-    // if (window.scrollY >= 2901 && window.scrollY < 2901) {
-    //   setView("SKILLS");
-    // }
+    if (window.scrollY >= 2282 && window.scrollY < 2881) {
+      setView("PROJECTS");
+    }
+    if (window.scrollY >= 2881) {
+      setView("CONTACT");
+    }
   };
 
   useEffect(

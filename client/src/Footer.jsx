@@ -56,7 +56,7 @@ const Footer = () => {
       <Typography
         variant="body1"
         style={{
-          color: "white",
+          color: "rgba(255, 255, 255, 0.3)",
           textAlign: "center",
           fontWeight: "100",
           marginTop: "15px"

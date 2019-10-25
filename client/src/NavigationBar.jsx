@@ -78,7 +78,6 @@ const NavigationBar = ({ changeView, view, navState }) => {
             <Link
               href="#About"
               style={{ margin: "10px 15px", textDecoration: "none" }}
-              onClick={() => handleClick("ABOUT")}
             >
               <Typography
                 className={
@@ -92,7 +91,6 @@ const NavigationBar = ({ changeView, view, navState }) => {
               href="#Skills"
               underline="none"
               style={{ margin: "10px 15px", textDecoration: "none" }}
-              onClick={() => handleClick("SKILLS")}
             >
               <Typography
                 className={
@@ -106,7 +104,6 @@ const NavigationBar = ({ changeView, view, navState }) => {
               href="#Projects"
               underline="none"
               style={{ margin: "10px 15px", textDecoration: "none" }}
-              onClick={() => handleClick("PROJECTS")}
             >
               <Typography
                 className={
@@ -120,7 +117,6 @@ const NavigationBar = ({ changeView, view, navState }) => {
               href="#Contact"
               underline="none"
               style={{ margin: "10px 15px", textDecoration: "none" }}
-              onClick={() => handleClick("CONTACT")}
             >
               <Typography
                 className={

@@ -22,31 +22,40 @@ import AerolyThumbnail from "../images/aeroly.png";
 import ProjectImages from "./ProjectImages.jsx";
 import Button from "@material-ui/core/Button";
 import GitHubIcon from "@material-ui/icons/GitHub";
+import Paper from "@material-ui/core/Paper";
 
 const useStyles = makeStyles({
   card: {
-    width: 200,
-    height: 200,
-    overflow: "hidden"
+    width: 300,
+    height: 300
   },
   gridSpace: {
-    margin: "60px 70px"
+    margin: "60px 60px"
   },
   overlay: {
-    background: "rgba(0, 0, 0, 0.6)",
+    background: "white",
     position: "absolute",
-    paddingTop: "75px",
+    paddingTop: "90px",
     textAlign: "center",
-    height: "200px",
-    width: "200px",
+    height: "300px",
+    width: "300px",
     opacity: 0,
     color: "white",
-    transition: "all 0.2s ease-in-out 0s",
+    transition: "all 0.3s ease-in-out 0s",
     "&:hover": {
       opacity: 1
     }
   },
-  thumbnails: { height: "200px", width: "100%" }
+  thumbnails: { height: "200px", width: "200px", margin: "45px 50px" },
+  contentOverlay: {
+    fontWeight: "100",
+    color: "black"
+  },
+  buttonOverlay: {
+    backgroundColor: "white",
+    margin: "30px",
+    borderColor: "brown"
+  }
 });
 
 const clothesyChipData = [
@@ -356,43 +365,55 @@ const Projects = () => {
         />
       </Grid>
       <Grid item className={classes.gridSpace}>
-        <div className={classes.card} onClick={() => setClothesyShow(true)}>
+        <Paper className={classes.card} onClick={() => setClothesyShow(true)}>
           <a style={{ cursor: "pointer" }}>
             <div className={classes.overlay}>
-              <Typography variant="h5" style={{ fontWeight: "100" }}>
+              <Typography variant="h4" className={classes.contentOverlay}>
                 Clothesy
               </Typography>
+              <Button variant="outlined" className={classes.buttonOverlay}>
+                Learn More
+              </Button>
             </div>
             <img className={classes.thumbnails} src={ClothesyThumbnail}></img>
           </a>
-        </div>
+        </Paper>
       </Grid>
       <Grid item className={classes.gridSpace}>
-        <div className={classes.card} onClick={() => setClothesyAPIShow(true)}>
+        <Paper
+          className={classes.card}
+          onClick={() => setClothesyAPIShow(true)}
+        >
           <a style={{ cursor: "pointer" }}>
             <div className={classes.overlay}>
-              <Typography variant="h5" style={{ fontWeight: "100" }}>
+              <Typography variant="h4" className={classes.contentOverlay}>
                 Clothesy API
               </Typography>
+              <Button variant="outlined" className={classes.buttonOverlay}>
+                Learn More
+              </Button>
             </div>
             <img
               className={classes.thumbnails}
               src={ClothesyAPIThumbnail}
             ></img>
           </a>
-        </div>
+        </Paper>
       </Grid>
       <Grid item className={classes.gridSpace}>
-        <div className={classes.card} onClick={() => setAerolyShow(true)}>
+        <Paper className={classes.card} onClick={() => setAerolyShow(true)}>
           <a style={{ cursor: "pointer" }}>
             <div className={classes.overlay}>
-              <Typography variant="h5" style={{ fontWeight: "100" }}>
+              <Typography variant="h4" className={classes.contentOverlay}>
                 Aeroly
               </Typography>
+              <Button variant="outlined" className={classes.buttonOverlay}>
+                Learn More
+              </Button>
             </div>
             <img className={classes.thumbnails} src={AerolyThumbnail}></img>
           </a>
-        </div>
+        </Paper>
       </Grid>
       <ClothesyModal
         show={clothesyShow}
