@@ -18,7 +18,6 @@ const App = () => {
   };
 
   const handleScroll = event => {
-    console.log(window.scrollY);
     if (window.scrollY >= 714) {
       setNavState(true);
     }
@@ -31,13 +30,13 @@ const App = () => {
     if (window.scrollY >= 765 && window.scrollY < 1349) {
       setView("ABOUT");
     }
-    if (window.scrollY >= 1349 && window.scrollY < 2282) {
+    if (window.scrollY >= 1349 && window.scrollY < 2331) {
       setView("SKILLS");
     }
-    if (window.scrollY >= 2282 && window.scrollY < 2881) {
+    if (window.scrollY >= 2331 && window.scrollY < 2930) {
       setView("PROJECTS");
     }
-    if (window.scrollY >= 2881) {
+    if (window.scrollY >= 2930) {
       setView("CONTACT");
     }
   };

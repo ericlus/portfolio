@@ -165,6 +165,10 @@ const Skills = () => {
             </ListItem>
             <ListItem>
               <ArrowRightRoundedIcon />
+              <ListItemText primary="Heroku" />
+            </ListItem>
+            <ListItem>
+              <ArrowRightRoundedIcon />
               <ListItemText primary="Webpack" />
             </ListItem>
             <ListItem>
