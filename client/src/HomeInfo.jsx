@@ -7,14 +7,17 @@ import Link from "@material-ui/core/Link";
 const HomeInfo = () => {
   return (
     <Grid container direction="row" justify="center" alignItems="center">
-      <Grid item xs={6}>
+      <Grid item xs={6} style={{ height: "100vh" }}>
         <Typography
           variant="h2"
           style={{
+            display: "flex",
             color: "white",
-            textAlign: "center",
-            margin: "250px 0px 10px 0px",
-            fontSize: "80px"
+            justifyContent: "center",
+            alignItems: "flex-end",
+            marginBottom: "10px",
+            fontSize: "80px",
+            height: "47%"
           }}
         >
           Hello!
@@ -30,7 +33,15 @@ const HomeInfo = () => {
           My name is Eric and I love creating something from nothing.
         </Typography>
 
-        <div style={{ textAlign: "center", margin: "270px 0px 10px 0px" }}>
+        <div
+          style={{
+            textAlign: "center",
+            width: "100%",
+            position: "absolute",
+            bottom: "0",
+            right: "0"
+          }}
+        >
           <Link
             href="#About"
             underline="none"
