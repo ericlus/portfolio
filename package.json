@@ -12,7 +12,7 @@
     "server-dev": "nodemon server/index.js",
     "build-prod": "webpack -p --mode production",
     "start": "node server/index.js",
-    "heroku-postbuild": "webpack -p"
+    "heroku-postbuild": "webpack -p --mode production"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
