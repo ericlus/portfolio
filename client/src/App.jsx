@@ -17,30 +17,6 @@ const App = () => {
     setView(view);
   };
 
-  // const handleScroll = event => {
-  //   if (window.scrollY >= 714) {
-  //     setNavState(true);
-  //   }
-  //   if (window.scrollY < 714) {
-  //     setNavState(false);
-  //   }
-  //   if (window.scrollY >= 0 && window.scrollY < 765) {
-  //     setView("HOME");
-  //   }
-  //   if (window.scrollY >= 765 && window.scrollY < 1349) {
-  //     setView("ABOUT");
-  //   }
-  //   if (window.scrollY >= 1349 && window.scrollY < 2331) {
-  //     setView("SKILLS");
-  //   }
-  //   if (window.scrollY >= 2331 && window.scrollY < 2930) {
-  //     setView("PROJECTS");
-  //   }
-  //   if (window.scrollY >= 2930) {
-  //     setView("CONTACT");
-  //   }
-  // };
-
   const handleScroll = (
     homeHeight,
     aboutHeight,
@@ -121,7 +97,10 @@ const App = () => {
           </Grid>
         </div>
       </section>
-      <section id="About" style={{ padding: "120px 0px" }}>
+      <section
+        id="About"
+        style={{ padding: "120px 0px", maxWidth: "1440px", margin: "auto" }}
+      >
         <About />
       </section>
       <section
@@ -130,16 +109,19 @@ const App = () => {
       >
         <Skills />
       </section>
-      <section id="Projects" style={{ padding: "120px 0px" }}>
+      <section
+        id="Projects"
+        style={{ padding: "120px 0px", maxWidth: "1440px", margin: "auto" }}
+      >
         <Projects />
       </section>
       <section
         id="Contact"
-        style={{ padding: "120px 0px", backgroundColor: "#f5f5f7" }}
+        style={{ padding: "140px 0px", backgroundColor: "#f5f5f7" }}
       >
         <Contact />
       </section>
-      <section style={{ padding: "75px", backgroundColor: "#242424" }}>
+      <section style={{ padding: "145px 75px", backgroundColor: "#242424" }}>
         <Footer />
       </section>
     </div>
