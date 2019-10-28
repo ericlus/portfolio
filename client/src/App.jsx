@@ -17,37 +17,66 @@ const App = () => {
     setView(view);
   };
 
-  const handleScroll = event => {
-    if (window.scrollY >= 714) {
+  const handleScroll = (
+    homeHeight,
+    aboutHeight,
+    skillsHeight,
+    projectsHeight
+  ) => {
+    if (window.scrollY >= homeHeight) {
       setNavState(true);
     }
-    if (window.scrollY < 714) {
+    if (window.scrollY < homeHeight) {
       setNavState(false);
     }
-    if (window.scrollY >= 0 && window.scrollY < 765) {
+    if (window.scrollY >= 0 && window.scrollY < homeHeight) {
       setView("HOME");
     }
-    if (window.scrollY >= 765 && window.scrollY < 1349) {
+    if (
+      window.scrollY >= homeHeight &&
+      window.scrollY < homeHeight + aboutHeight
+    ) {
       setView("ABOUT");
     }
-    if (window.scrollY >= 1349 && window.scrollY < 2331) {
+    if (
+      window.scrollY >= homeHeight + aboutHeight &&
+      window.scrollY < homeHeight + aboutHeight + skillsHeight
+    ) {
       setView("SKILLS");
     }
-    if (window.scrollY >= 2331 && window.scrollY < 2930) {
+    if (
+      window.scrollY >= homeHeight + aboutHeight + skillsHeight - 1 &&
+      window.scrollY < homeHeight + aboutHeight + skillsHeight + projectsHeight
+    ) {
       setView("PROJECTS");
     }
-    if (window.scrollY >= 2930) {
+    if (
+      window.scrollY >=
+      homeHeight + aboutHeight + skillsHeight + projectsHeight - 1
+    ) {
       setView("CONTACT");
     }
   };
 
-  useEffect(
-    () => window.addEventListener("scroll", handleScroll, { passive: true }),
-    []
-  );
+  useEffect(() => {
+    const home = document.querySelector("#Home");
+    const about = document.querySelector("#About");
+    const skills = document.querySelector("#Skills");
+    const projects = document.querySelector("#Projects");
+    const homeHeight = home.getBoundingClientRect().height;
+    const aboutHeight = about.getBoundingClientRect().height;
+    const skillsHeight = skills.getBoundingClientRect().height;
+    const projectsHeight = projects.getBoundingClientRect().height;
+
+    window.addEventListener(
+      "scroll",
+      () => handleScroll(homeHeight, aboutHeight, skillsHeight, projectsHeight),
+      false
+    );
+  }, []);
 
   return (
-    <div>
+    <div id="main">
       <section id="Home">
         <div
           style={{
@@ -68,25 +97,31 @@ const App = () => {
           </Grid>
         </div>
       </section>
-      <section id="About" style={{ padding: "75px 0px" }}>
+      <section
+        id="About"
+        style={{ padding: "120px 0px", maxWidth: "1440px", margin: "auto" }}
+      >
         <About />
       </section>
       <section
         id="Skills"
-        style={{ padding: "75px 0px", backgroundColor: "#f5f5f7" }}
+        style={{ padding: "120px 0px", backgroundColor: "#f5f5f7" }}
       >
         <Skills />
       </section>
-      <section id="Projects" style={{ padding: "75px 0px" }}>
+      <section
+        id="Projects"
+        style={{ padding: "120px 0px", maxWidth: "1440px", margin: "auto" }}
+      >
         <Projects />
       </section>
       <section
         id="Contact"
-        style={{ padding: "75px 0px", backgroundColor: "#f5f5f7" }}
+        style={{ padding: "140px 0px", backgroundColor: "#f5f5f7" }}
       >
         <Contact />
       </section>
-      <section style={{ padding: "75px", backgroundColor: "#242424" }}>
+      <section style={{ padding: "145px 75px", backgroundColor: "#242424" }}>
         <Footer />
       </section>
     </div>

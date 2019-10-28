@@ -29,13 +29,23 @@ const useStyles = makeStyles(theme => ({
   icons: {
     fontSize: "30px",
     marginBottom: "15px"
+  },
+  subSection: {
+    textAlign: "center",
+    margin: "60px 30px"
   }
 }));
 
 const Skills = () => {
   const classes = useStyles();
   return (
-    <Grid container direction="row" justify="center" alignItems="flex-start">
+    <Grid
+      container
+      direction="row"
+      justify="center"
+      alignItems="flex-start"
+      style={{ maxWidth: "1440px", margin: "auto" }}
+    >
       <Grid item xs={12} style={{ textAlign: "center" }}>
         <Typography
           variant="h4"
@@ -47,7 +57,7 @@ const Skills = () => {
           variant="middle"
           style={{ backgroundColor: "brown", margin: "auto", width: "10%" }}
         />
-        <Typography style={{ margin: "60px 110px 0px 110px" }}>
+        <Typography style={{ margin: "80px 200px 40px", fontSize: "18px" }}>
           My main programming language is JavaScript and all the{" "}
           <Link href="#Projects" style={{ cursor: "pointer", color: "brown" }}>
             projects
@@ -61,7 +71,7 @@ const Skills = () => {
         </Typography>
       </Grid>
 
-      <Grid item style={{ textAlign: "center", margin: "60px 30px" }}>
+      <Grid item className={classes.subSection}>
         <FontAwesomeIcon icon={faCode} className={classes.icons} />
         <Paper className={classes.root}>
           <Typography variant="h5" className={classes.subHeader}>
@@ -92,7 +102,7 @@ const Skills = () => {
           </List>
         </Paper>
       </Grid>
-      <Grid item style={{ textAlign: "center", margin: "60px 30px" }}>
+      <Grid item className={classes.subSection}>
         <FontAwesomeIcon icon={faDatabase} className={classes.icons} />
         <Paper className={classes.root}>
           <Typography variant="h5" className={classes.subHeader}>
@@ -122,7 +132,7 @@ const Skills = () => {
           </List>
         </Paper>
       </Grid>
-      <Grid item style={{ textAlign: "center", margin: "60px 30px" }}>
+      <Grid item className={classes.subSection}>
         <FontAwesomeIcon icon={faTasks} className={classes.icons} />
         <Paper className={classes.root}>
           <Typography variant="h5" className={classes.subHeader}>
@@ -148,7 +158,7 @@ const Skills = () => {
           </List>
         </Paper>
       </Grid>
-      <Grid item style={{ textAlign: "center", margin: "60px 30px" }}>
+      <Grid item className={classes.subSection}>
         <FontAwesomeIcon icon={faSitemap} className={classes.icons} />
         <Paper className={classes.root}>
           <Typography variant="h5" className={classes.subHeader}>

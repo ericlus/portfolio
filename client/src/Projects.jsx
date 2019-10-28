@@ -30,7 +30,7 @@ const useStyles = makeStyles({
     height: 300
   },
   gridSpace: {
-    margin: "60px 60px"
+    margin: "80px 60px"
   },
   overlay: {
     background: "white",

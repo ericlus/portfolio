@@ -19,8 +19,8 @@ const useStyles = makeStyles(theme => ({
 const Footer = () => {
   const classes = useStyles();
   return (
-    <div>
-      <div style={{ textAlign: "center" }}>
+    <div style={{ maxWidth: "1440px", margin: "auto" }}>
+      <div style={{ textAlign: "center", marginBottom: "30px" }}>
         <Fab
           href="https://github.com/ericlus"
           target="_blank"
@@ -59,7 +59,7 @@ const Footer = () => {
           color: "rgba(255, 255, 255, 0.3)",
           textAlign: "center",
           fontWeight: "100",
-          marginTop: "15px"
+          marginTop: "30px"
         }}
       >
         ERIC LUU @ 2019
