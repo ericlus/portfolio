@@ -236,8 +236,8 @@ const ClothesyAPIModal = props => {
             <p>
               Some of the challenges I faced was finding a way to optimize
               database query speeds. The initial speed to query across three
-              tables to find a all the questions, answers, and photos related to
-              a specific product id was around 22 s. To resolve this issue I
+              tables to find all the questions, answers, and photos related to a
+              specific product id was around 22 s. To resolve this issue I
               indexed the foreign keys for each table and used aggregate
               functions to reduce the query speed to 4 ms.
             </p>
