@@ -19,22 +19,15 @@ const About = () => {
           style={{ backgroundColor: "brown", margin: "auto", width: "10%" }}
         />
       </Grid>
-
-      <Grid item xs={4} style={{ margin: "80px 40px" }}>
-        <Typography variant="h6" style={{ marginBottom: "20px" }}>
-          Background
-        </Typography>
-        <Typography style={{ marginBottom: "15px", fontSize: "18px" }}>
+      <Grid item xs={8} style={{ margin: "80px 40px" }}>
+        <Typography style={{ fontSize: "18px" }}>
           I graduated from the City College of New York with a degree in
           Biomedical Engineering. I really enjoyed using code to program and
           configure medical devices, however, I was more interested in the code
-          over the actual science behind the devices.
-        </Typography>
-
-        <Typography style={{ fontSize: "18px" }}>
-          I decided to pursue my passion in coding by attending an advanced
-          software engineering immersive program where I learned to develop
-          projects using the entire stack. Here the{" "}
+          over the actual science behind the devices. I decided to pursue my
+          passion in coding by attending an advanced software engineering
+          immersive program where I learned to develop projects using the entire
+          stack. Here the{" "}
           <Link href="#Skills" style={{ cursor: "pointer", color: "brown" }}>
             technologies
           </Link>{" "}
@@ -44,22 +37,6 @@ const About = () => {
           </Link>{" "}
           I developed.
         </Typography>
-      </Grid>
-      <Grid item xs={4} style={{ margin: "80px 40px" }}>
-        <Typography variant="h6" style={{ marginBottom: "20px" }}>
-          Interests
-        </Typography>
-        <Typography style={{ fontSize: "18px" }}>
-          Here are some of the things that I like do in my free time:
-        </Typography>
-        <ul>
-          <Typography style={{ fontSize: "18px" }}>
-            <li>Binge watching good TV shows</li>
-            <li>Spending time with friends and family</li>
-            <li>Connecting with individuals that share the same interests</li>
-            <li>Exploring new frameworks or modules</li>
-          </Typography>
-        </ul>
       </Grid>
     </Grid>
   );

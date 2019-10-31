@@ -46,10 +46,14 @@ const Skills = () => {
       alignItems="flex-start"
       style={{ maxWidth: "1440px", margin: "auto" }}
     >
-      <Grid item xs={12} style={{ textAlign: "center" }}>
+      <Grid item xs={12}>
         <Typography
           variant="h4"
-          style={{ fontWeight: "100", marginBottom: "15px" }}
+          style={{
+            fontWeight: "100",
+            marginBottom: "15px",
+            textAlign: "center"
+          }}
         >
           Skills
         </Typography>
