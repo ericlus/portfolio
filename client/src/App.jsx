@@ -121,7 +121,7 @@ const App = () => {
       >
         <Contact />
       </section>
-      <section style={{ padding: "145px 75px", backgroundColor: "#242424" }}>
+      <section style={{ padding: "145px 0px", backgroundColor: "#242424" }}>
         <Footer />
       </section>
     </div>
