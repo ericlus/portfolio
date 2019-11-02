@@ -7,10 +7,14 @@ import Link from "@material-ui/core/Link";
 const About = () => {
   return (
     <Grid container direction="row" justify="center" alignItems="flex-start">
-      <Grid item xs={12} style={{ textAlign: "center" }}>
+      <Grid item xs={12}>
         <Typography
           variant="h4"
-          style={{ fontWeight: "100", marginBottom: "15px" }}
+          style={{
+            fontWeight: "100",
+            marginBottom: "15px",
+            textAlign: "center"
+          }}
         >
           About Me
         </Typography>
@@ -19,7 +23,7 @@ const About = () => {
           style={{ backgroundColor: "brown", margin: "auto", width: "10%" }}
         />
       </Grid>
-      <Grid item xs={8} style={{ margin: "80px 40px" }}>
+      <Grid item xs={12} style={{ margin: "80px 17vw" }}>
         <Typography style={{ fontSize: "18px" }}>
           I graduated from the City College of New York with a degree in
           Biomedical Engineering. I really enjoyed using code to program and

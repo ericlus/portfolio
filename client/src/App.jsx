@@ -122,7 +122,12 @@ const App = () => {
       </section>
       <section
         id="Skills"
-        style={{ padding: "120px 0px", backgroundColor: "#f5f5f7" }}
+        style={{
+          padding: "120px 0px",
+          backgroundColor: "#f5f5f7",
+          maxWidth: "1440px",
+          margin: "auto"
+        }}
       >
         <Skills />
       </section>
