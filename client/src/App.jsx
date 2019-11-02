@@ -109,8 +109,8 @@ const App = () => {
                 navState={navState}
                 viewWidth={viewWidth}
               />
-              <HomeInfo />
             </Grid>
+            <HomeInfo />
           </Grid>
         </div>
       </section>
