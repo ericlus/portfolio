@@ -139,11 +139,21 @@ const App = () => {
       </section>
       <section
         id="Contact"
-        style={{ padding: "140px 0px", backgroundColor: "#f5f5f7" }}
+        style={{
+          padding: "140px 0px",
+          backgroundColor: "#f5f5f7",
+          maxWidth: "1440px",
+          margin: "auto"
+        }}
       >
         <Contact />
       </section>
-      <section style={{ padding: "145px 0px", backgroundColor: "#242424" }}>
+      <section
+        style={{
+          padding: "145px 0px",
+          backgroundColor: "#242424"
+        }}
+      >
         <Footer />
       </section>
     </div>
