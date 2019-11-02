@@ -12,6 +12,7 @@ import Footer from "./Footer.jsx";
 const App = () => {
   const [view, setView] = useState("HOME");
   const [navState, setNavState] = useState(false);
+  const [viewWidth, setViewWidth] = useState(window.innerWidth);
 
   const changeView = view => {
     setView(view);
@@ -58,6 +59,10 @@ const App = () => {
     }
   };
 
+  const handleResize = () => {
+    setViewWidth(window.innerWidth);
+  };
+
   useEffect(() => {
     const home = document.querySelector("#Home");
     const about = document.querySelector("#About");
@@ -68,12 +73,23 @@ const App = () => {
     const skillsHeight = skills.getBoundingClientRect().height;
     const projectsHeight = projects.getBoundingClientRect().height;
 
-    window.addEventListener(
-      "scroll",
-      () => handleScroll(homeHeight, aboutHeight, skillsHeight, projectsHeight),
-      false
+    window.addEventListener("scroll", () =>
+      handleScroll(homeHeight, aboutHeight, skillsHeight, projectsHeight)
     );
+
+    return () => {
+      window.removeEventListener("scroll", () =>
+        handleScroll(homeHeight, aboutHeight, skillsHeight, projectsHeight)
+      );
+    };
   }, []);
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  });
 
   return (
     <div id="main">
@@ -91,6 +107,7 @@ const App = () => {
                 changeView={changeView}
                 view={view}
                 navState={navState}
+                viewWidth={viewWidth}
               />
               <HomeInfo />
             </Grid>
