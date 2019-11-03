@@ -3,10 +3,26 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import Button from "@material-ui/core/Button";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles(theme => ({
+  textWidth: {
+    margin: "80px 17vw",
+    textAlign: "center",
+    "@media (max-width: 1320px)": { margin: "80px 10vw" }
+  }
+}));
 
 const Contact = () => {
+  const classes = useStyles();
   return (
-    <Grid container direction="row" justify="center" alignItems="center">
+    <Grid
+      container
+      direction="row"
+      justify="center"
+      alignItems="center"
+      style={{ maxWidth: "1440px", margin: "auto" }}
+    >
       <Grid item xs={12} style={{ textAlign: "center" }}>
         <Typography
           variant="h4"
@@ -19,7 +35,7 @@ const Contact = () => {
           style={{ backgroundColor: "brown", margin: "auto", width: "10%" }}
         />
       </Grid>
-      <Grid item xs={12} style={{ margin: "80px 17vw", textAlign: "center" }}>
+      <Grid item xs={12} className={classes.textWidth}>
         <Typography style={{ fontSize: "18px" }}>
           I am currently looking for a software engineering position where I can
           contribute success to a company and advance my skills.

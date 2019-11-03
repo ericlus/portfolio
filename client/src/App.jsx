@@ -124,9 +124,7 @@ const App = () => {
         id="Skills"
         style={{
           padding: "120px 0px",
-          backgroundColor: "#f5f5f7",
-          maxWidth: "1440px",
-          margin: "auto"
+          backgroundColor: "#f5f5f7"
         }}
       >
         <Skills />
@@ -135,15 +133,13 @@ const App = () => {
         id="Projects"
         style={{ padding: "120px 0px", maxWidth: "1440px", margin: "auto" }}
       >
-        <Projects />
+        <Projects viewWidth={viewWidth} />
       </section>
       <section
         id="Contact"
         style={{
           padding: "140px 0px",
-          backgroundColor: "#f5f5f7",
-          maxWidth: "1440px",
-          margin: "auto"
+          backgroundColor: "#f5f5f7"
         }}
       >
         <Contact />

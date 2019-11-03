@@ -23,7 +23,7 @@ const About = () => {
           style={{ backgroundColor: "brown", margin: "auto", width: "10%" }}
         />
       </Grid>
-      <Grid item xs={12} style={{ margin: "80px 17vw" }}>
+      <Grid item xs={12} style={{ margin: "80px 10vw" }}>
         <Typography style={{ fontSize: "18px" }}>
           I graduated from the City College of New York with a degree in
           Biomedical Engineering. I really enjoyed using code to program and

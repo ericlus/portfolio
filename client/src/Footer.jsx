@@ -45,7 +45,7 @@ const Footer = () => {
           color: "rgba(255, 255, 255, 0.3)",
           textAlign: "center",
           fontWeight: "100",
-          margin: "15px 300px"
+          margin: "15px 17vw"
         }}
       >
         This website was built using Material-UI and Bootstrap.{" "}

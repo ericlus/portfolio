@@ -39,7 +39,13 @@ const useStyles = makeStyles(theme => ({
 const Skills = () => {
   const classes = useStyles();
   return (
-    <Grid container direction="row" justify="center" alignItems="flex-start">
+    <Grid
+      container
+      direction="row"
+      justify="center"
+      alignItems="flex-start"
+      style={{ maxWidth: "1440px", margin: "auto" }}
+    >
       <Grid item xs={12}>
         <Typography
           variant="h4"
@@ -56,7 +62,7 @@ const Skills = () => {
           style={{ backgroundColor: "brown", margin: "auto", width: "10%" }}
         />
       </Grid>
-      <Grid item xs={12} style={{ margin: "80px 17vw" }}>
+      <Grid item xs={12} style={{ margin: "80px 10vw" }}>
         <Typography style={{ fontSize: "18px" }}>
           My main programming language is JavaScript and all the{" "}
           <Link href="#Projects" style={{ cursor: "pointer", color: "brown" }}>
