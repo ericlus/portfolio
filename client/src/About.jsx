@@ -31,7 +31,7 @@ const About = () => {
           over the actual science behind the devices. I decided to pursue my
           passion in coding by attending an advanced software engineering
           immersive program where I learned to develop projects using the entire
-          stack. Here the{" "}
+          stack. Here are the{" "}
           <Link href="#Skills" style={{ cursor: "pointer", color: "brown" }}>
             technologies
           </Link>{" "}

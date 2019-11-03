@@ -2,14 +2,28 @@ import React from "react";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
-import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
+import Fab from "@material-ui/core/Fab";
+import MailOutlineIcon from "@material-ui/icons/MailOutline";
+import AccountBoxIcon from "@material-ui/icons/AccountBox";
 
 const useStyles = makeStyles(theme => ({
   textWidth: {
     margin: "80px 17vw",
     textAlign: "center",
     "@media (max-width: 1320px)": { margin: "80px 10vw" }
+  },
+  fab: {
+    margin: theme.spacing(1),
+    backgroundColor: "white",
+    color: "black",
+    "&:hover": {
+      textDecoration: "none",
+      color: "rgba(0, 0, 0, 0.87)"
+    }
+  },
+  extendedIcon: {
+    marginRight: theme.spacing(1)
   }
 }));
 
@@ -41,18 +55,25 @@ const Contact = () => {
           contribute success to a company and advance my skills.
         </Typography>
       </Grid>
-      <Button
+      <Fab
+        variant="extended"
+        aria-label="like"
+        className={classes.fab}
         href="mailto:ericluu24@gmail.com"
-        variant="outlined"
-        style={{
-          borderColor: "brown",
-          backgroundColor: "white",
-          textDecoration: "none",
-          color: "black"
-        }}
       >
-        Let's get in touch
-      </Button>
+        <MailOutlineIcon className={classes.extendedIcon} />
+        Email
+      </Fab>
+      <Fab
+        variant="extended"
+        aria-label="like"
+        className={classes.fab}
+        href="/EricLuuResume"
+        target="_blank"
+      >
+        <AccountBoxIcon className={classes.extendedIcon} />
+        Resume
+      </Fab>
     </Grid>
   );
 };

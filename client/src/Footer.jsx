@@ -9,7 +9,11 @@ import MailIcon from "@material-ui/icons/Mail";
 const useStyles = makeStyles(theme => ({
   fab: {
     margin: theme.spacing(2),
-    backgroundColor: "white"
+    backgroundColor: "white",
+    "&:hover": {
+      textDecoration: "none",
+      color: "rgba(0, 0, 0, 0.87)"
+    }
   },
   extendedIcon: {
     marginRight: theme.spacing(1)

@@ -6,7 +6,7 @@ const app = express();
 
 app.use("/", express.static(path.join(__dirname, "../client/dist")));
 
-app.get("/resume", (req, res) => {
+app.get("/EricLuuResume", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/images/EricLuuResume.pdf"));
 });
 
