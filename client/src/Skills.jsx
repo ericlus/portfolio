@@ -61,7 +61,9 @@ const Skills = () => {
           variant="middle"
           style={{ backgroundColor: "brown", margin: "auto", width: "10%" }}
         />
-        <Typography style={{ margin: "80px 200px 40px", fontSize: "18px" }}>
+      </Grid>
+      <Grid item xs={12} style={{ margin: "80px 10vw" }}>
+        <Typography style={{ fontSize: "18px" }}>
           My main programming language is JavaScript and all the{" "}
           <Link href="#Projects" style={{ cursor: "pointer", color: "brown" }}>
             projects

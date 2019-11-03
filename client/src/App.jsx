@@ -12,6 +12,7 @@ import Footer from "./Footer.jsx";
 const App = () => {
   const [view, setView] = useState("HOME");
   const [navState, setNavState] = useState(false);
+  const [viewWidth, setViewWidth] = useState(window.innerWidth);
 
   const changeView = view => {
     setView(view);
@@ -58,6 +59,10 @@ const App = () => {
     }
   };
 
+  const handleResize = () => {
+    setViewWidth(window.innerWidth);
+  };
+
   useEffect(() => {
     const home = document.querySelector("#Home");
     const about = document.querySelector("#About");
@@ -68,12 +73,23 @@ const App = () => {
     const skillsHeight = skills.getBoundingClientRect().height;
     const projectsHeight = projects.getBoundingClientRect().height;
 
-    window.addEventListener(
-      "scroll",
-      () => handleScroll(homeHeight, aboutHeight, skillsHeight, projectsHeight),
-      false
+    window.addEventListener("scroll", () =>
+      handleScroll(homeHeight, aboutHeight, skillsHeight, projectsHeight)
     );
+
+    return () => {
+      window.removeEventListener("scroll", () =>
+        handleScroll(homeHeight, aboutHeight, skillsHeight, projectsHeight)
+      );
+    };
   }, []);
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  });
 
   return (
     <div id="main">
@@ -91,9 +107,10 @@ const App = () => {
                 changeView={changeView}
                 view={view}
                 navState={navState}
+                viewWidth={viewWidth}
               />
-              <HomeInfo />
             </Grid>
+            <HomeInfo />
           </Grid>
         </div>
       </section>
@@ -105,7 +122,10 @@ const App = () => {
       </section>
       <section
         id="Skills"
-        style={{ padding: "120px 0px", backgroundColor: "#f5f5f7" }}
+        style={{
+          padding: "120px 0px",
+          backgroundColor: "#f5f5f7"
+        }}
       >
         <Skills />
       </section>
@@ -113,15 +133,23 @@ const App = () => {
         id="Projects"
         style={{ padding: "120px 0px", maxWidth: "1440px", margin: "auto" }}
       >
-        <Projects />
+        <Projects viewWidth={viewWidth} />
       </section>
       <section
         id="Contact"
-        style={{ padding: "140px 0px", backgroundColor: "#f5f5f7" }}
+        style={{
+          padding: "140px 0px",
+          backgroundColor: "#f5f5f7"
+        }}
       >
         <Contact />
       </section>
-      <section style={{ padding: "145px 0px", backgroundColor: "#242424" }}>
+      <section
+        style={{
+          padding: "145px 0px",
+          backgroundColor: "#242424"
+        }}
+      >
         <Footer />
       </section>
     </div>

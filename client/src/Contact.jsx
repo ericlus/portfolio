@@ -3,8 +3,18 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import Button from "@material-ui/core/Button";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles(theme => ({
+  textWidth: {
+    margin: "80px 17vw",
+    textAlign: "center",
+    "@media (max-width: 1320px)": { margin: "80px 10vw" }
+  }
+}));
 
 const Contact = () => {
+  const classes = useStyles();
   return (
     <Grid
       container
@@ -24,23 +34,25 @@ const Contact = () => {
           variant="middle"
           style={{ backgroundColor: "brown", margin: "auto", width: "10%" }}
         />
-        <Typography style={{ margin: "80px 250px", fontSize: "18px" }}>
+      </Grid>
+      <Grid item xs={12} className={classes.textWidth}>
+        <Typography style={{ fontSize: "18px" }}>
           I am currently looking for a software engineering position where I can
           contribute success to a company and advance my skills.
         </Typography>
-        <Button
-          href="mailto:ericluu24@gmail.com"
-          variant="outlined"
-          style={{
-            borderColor: "brown",
-            backgroundColor: "white",
-            textDecoration: "none",
-            color: "black"
-          }}
-        >
-          Let's get in touch
-        </Button>
       </Grid>
+      <Button
+        href="mailto:ericluu24@gmail.com"
+        variant="outlined"
+        style={{
+          borderColor: "brown",
+          backgroundColor: "white",
+          textDecoration: "none",
+          color: "black"
+        }}
+      >
+        Let's get in touch
+      </Button>
     </Grid>
   );
 };
