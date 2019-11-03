@@ -89,7 +89,7 @@ const SideDrawer = ({ handleClick }) => {
             <ListItemText primary={"Contact"} />
           </ListItem>
         </a>
-        <a href="/resume" target="_blank" className={classes.listColor}>
+        <a href="/EricLuuResume" target="_blank" className={classes.listColor}>
           <ListItem button>
             <PictureAsPdfIcon className={classes.icons} />
             <ListItemText primary={"Resume"} />

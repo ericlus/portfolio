@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
     marginBottom: "10px",
     fontSize: "80px",
     height: "47%",
-    "@media (max-width: 639px)": { height: "45%" }
+    "@media (max-width: 639px)": { height: "45%", fontSize: "70px" }
   },
   text: {
     color: "white",
@@ -22,7 +22,8 @@ const useStyles = makeStyles(theme => ({
     fontSize: "30px",
     width: "70%",
     margin: "auto",
-    "@media (max-width: 458px)": { width: "90%" }
+    "@media (max-width: 458px)": { width: "90%" },
+    "@media (max-width: 639px)": { fontSize: "25px" }
   }
 }));
 

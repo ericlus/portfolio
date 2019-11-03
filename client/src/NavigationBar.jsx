@@ -134,7 +134,7 @@ const NavigationBar = ({ changeView, view, navState, viewWidth }) => {
               </Link>
               <Button
                 variant="outlined"
-                href="/resume"
+                href="/EricLuuResume"
                 target="_blank"
                 style={{
                   color: "white",
