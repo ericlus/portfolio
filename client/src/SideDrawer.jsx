@@ -20,10 +20,7 @@ const useStyles = makeStyles({
     marginLeft: "auto"
   },
   paper: {
-    height: "33%",
-    "@media (max-height: 667px)": {
-      height: "40%"
-    }
+    height: "auto"
   },
   icons: {
     marginRight: "32px"
