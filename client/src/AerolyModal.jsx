@@ -175,18 +175,26 @@ const AerolyModal = props => {
                 dynamically render the array of values as selectable entries
                 that will auto fill the search when clicked.
               </p>
-              <Paper className={classes.imagePaper}>
-                <img className={classes.image} src={AerolyScreenshot1} />
-              </Paper>
-              <Paper className={classes.imagePaper}>
-                <img className={classes.image} src={AerolyScreenshot2} />
-              </Paper>
-              <Paper className={classes.imagePaper}>
-                <img className={classes.image} src={AerolyScreenshot3} />
-              </Paper>
-              <Paper className={classes.imagePaper}>
-                <img className={classes.image} src={AerolyScreenshot4} />
-              </Paper>
+              <a href="/aeroly/1" target="_blank">
+                <Paper className={classes.imagePaper}>
+                  <img className={classes.image} src={AerolyScreenshot1} />
+                </Paper>
+              </a>
+              <a href="/aeroly/2" target="_blank">
+                <Paper className={classes.imagePaper}>
+                  <img className={classes.image} src={AerolyScreenshot2} />
+                </Paper>
+              </a>
+              <a href="/aeroly/3" target="_blank">
+                <Paper className={classes.imagePaper}>
+                  <img className={classes.image} src={AerolyScreenshot3} />
+                </Paper>
+              </a>
+              <a href="/aeroly/4" target="_blank">
+                <Paper className={classes.imagePaper}>
+                  <img className={classes.image} src={AerolyScreenshot4} />
+                </Paper>
+              </a>
             </Grid>
           </Grid>
         )}

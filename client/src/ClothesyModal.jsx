@@ -190,15 +190,21 @@ const ClothesyModal = props => {
                 the class based component to a functional component in order to
                 use both Bootstrap and Material-UI.
               </p>
-              <Paper className={classes.imagePaper}>
-                <img className={classes.image} src={ClothesyScreenshot1} />
-              </Paper>
-              <Paper className={classes.imagePaper}>
-                <img className={classes.image} src={ClothesyScreenshot2} />
-              </Paper>
-              <Paper className={classes.imagePaper}>
-                <img className={classes.image} src={ClothesyScreenshot3} />
-              </Paper>
+              <a href="/clothesy/1" target="_blank">
+                <Paper className={classes.imagePaper}>
+                  <img className={classes.image} src={ClothesyScreenshot1} />
+                </Paper>
+              </a>
+              <a href="/clothesy/2" target="_blank">
+                <Paper className={classes.imagePaper}>
+                  <img className={classes.image} src={ClothesyScreenshot2} />
+                </Paper>
+              </a>
+              <a href="/clothesy/3" target="_blank">
+                <Paper className={classes.imagePaper}>
+                  <img className={classes.image} src={ClothesyScreenshot3} />
+                </Paper>
+              </a>
             </Grid>
           </Grid>
         )}
