@@ -193,6 +193,16 @@ const ClothesyAPIModal = props => {
                 requests across my servers. The maximum RPS increased to 2000
                 with an error rate of 0% and an average response time of 32 ms.
               </p>
+              <a href="/clothesyAPI/4" target="_blank">
+                <Paper className={classes.imagePaper}>
+                  <img className={classes.image} src={ClothesyAPIScreenshot4} />
+                </Paper>
+              </a>
+              <a href="/clothesyAPI/3" target="_blank">
+                <Paper className={classes.imagePaper}>
+                  <img className={classes.image} src={ClothesyAPIScreenshot3} />
+                </Paper>
+              </a>
               <a href="/clothesyAPI/1" target="_blank">
                 <Paper className={classes.imagePaper}>
                   <img className={classes.image} src={ClothesyAPIScreenshot1} />
@@ -201,16 +211,6 @@ const ClothesyAPIModal = props => {
               <a href="/clothesyAPI/2" target="_blank">
                 <Paper className={classes.imagePaper}>
                   <img className={classes.image} src={ClothesyAPIScreenshot2} />
-                </Paper>
-              </a>
-              <a href="/clothesyAPI/3" target="_blank">
-                <Paper className={classes.imagePaper}>
-                  <img className={classes.image} src={ClothesyAPIScreenshot3} />
-                </Paper>
-              </a>
-              <a href="/clothesyAPI/4" target="_blank">
-                <Paper className={classes.imagePaper}>
-                  <img className={classes.image} src={ClothesyAPIScreenshot4} />
                 </Paper>
               </a>
             </Grid>
